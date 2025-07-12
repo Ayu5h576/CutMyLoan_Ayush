@@ -1,0 +1,2013 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./assets/fevicon.png" />
+    <title>CutMyLoan</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    </style>
+</head>
+
+<body>
+    <style>
+
+*{
+    margin: 0;
+    cursor: default;
+    box-sizing: border-box;
+}
+.wrapper{
+    height: 100vh;
+    width: 100vw;
+  overflow-x: hidden;
+    
+}
+            .navbar{
+                position:sticky;
+         
+  top: 0;
+  z-index: 1000;
+  padding: 10px 0;
+                display: flex;
+                flex-direction:row ;
+               
+                gap: 0;
+                height: 98px;
+                background-image:linear-gradient(to right,#DFDFDF,#DBDDDF,#D1D7D9) ;
+                /* background: #28597B; */
+            padding-left: 150px;
+            padding-right: 150px;
+
+
+            
+
+            }
+            .third{
+                color: #28597B;
+            }
+
+            .nav-item{
+                display: flex;
+                flex-direction: row;
+                /* justify-content: center;
+                align-items: center; */
+                gap: 40px;
+                font-size: 22px;
+            
+                font-family:poppins;
+                margin: auto;
+                padding-left: 12px;
+                padding-right: 12px;
+                padding-top: 20px;
+                padding-bottom: 20px;
+
+                
+            }
+            .dropdown {
+      position: relative;
+      display: inline-block;
+      font-size: 14.74px;
+    }
+
+    
+    .dropdown a {
+      /* padding: 10px 20px; */
+      /* background-color: #012C4A; */
+      color: #000000;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f1f1f1;
+      min-width: 160px;
+      z-index: 1;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .dropdown-content a {
+      color: black;
+      padding: 10px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+
+    .dropdown a:hover{
+      cursor: pointer;
+      color: #012C4A;
+               
+                transform: scale(1.1);
+    transition: 50ms all ease-in-out;
+
+    }
+ 
+    .dropdown:hover .dropdown-content {
+      display: block;
+      
+    }
+
+    .dropdown-content a:hover {
+      background-color: #ddd;
+      cursor: pointer;
+    }
+
+            .nav-item h6 {
+                font-weight: normal;
+            }
+
+
+
+
+            .nav-item h6:hover {
+                color: #012C4A;
+                /* font-weight: bold; */
+                /* transition: 1ms all ease-in-out; */
+                cursor: pointer;
+                transform: scale(1.1);
+    transition: 50ms all ease-in-out;
+
+            }
+            .logo{
+                width: 175px;
+                height: 79px;
+                margin-top: 1px;
+                
+                
+            }
+            .text1{
+                font-family: poppins;
+                font-size: 38px;
+                font-weight: bold;
+                color: #012C4A;
+            }
+            .text{
+                padding-left: 150px;
+                
+margin-top: 90px;
+            }
+
+
+            .hero-container {
+                    position: relative;
+                    
+                    width: 100%;
+                    height: 812px; 
+                    overflow: hidden;
+                    }
+
+                .hero {
+                    opacity: 60%;
+                width: 100vw;
+                height: 100%;
+                object-fit: cover;
+                }
+
+         .loan{
+                width: 95px;
+                height: 95px;
+            }
+
+
+            .text, .img1,.img2,.img3,.img4 {
+            position: absolute;
+            z-index: 2;
+            }
+
+
+.text { top: 20%; }
+.img1 { top: 12%; right: 14.5%; }
+.img2 { top: 23.1%; right: 3%; }
+.img3 { top: 1%; right: 26%; }
+.img4{top:12% ;right:36% ;}
+
+.img1 ,.img2,.img3,.img4 p{
+    font-size: 18px;
+            font-family: poppins;
+            font-weight: bold;
+            color: #012C4A;
+              
+}
+            
+          .b1{
+            margin-top: 33px;
+            width: 270px;
+            height: 86px;
+            border-radius: 18px;
+            font-size: 22px;
+            font-family: poppins;
+            background: #012C4A;
+            color: white;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+
+          }
+
+          .b1 img{
+            width: 22px;
+            height: 22px;
+            /* font-weight: bold; */
+            /* padding: 1px; */
+          }
+          .b1:hover{
+            cursor: pointer;
+            background: #28597B;
+            transition: 200ms all ease-in-out;
+
+            
+          }
+
+
+          .trust{
+            width: 100vw;
+            /* height: 948px; */
+            padding-left: 150px;
+            padding-right: 150px;
+            background-image:linear-gradient(to right,#647f9283 ,#ACB5BC ,#B4BDBF ,white,white,white) ;
+           
+          }
+
+          .top
+          {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+          }
+
+          .p1{
+            padding-top: 30px;
+                color: #012C4A;
+                font-size: 40px;
+                font-family: poppins;
+                font-weight:70px;
+
+          }
+          .p2 h6{
+            font-size: 22px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: normal;
+            color: #6B7280;
+          }
+
+          .p3{
+            display: none;
+          }
+
+          .l1{
+            height: 15px;
+            width: 107px;
+            background: #012C4A;
+          }
+
+
+          .stats-section{
+            width: 662px;
+            height: 297px;
+            display: grid;
+            grid-template-columns: 260px 260px;
+            grid-template-rows: 110px 110px;
+            gap: 30px;
+            margin-top: 140px;
+          }
+
+          .box{
+            /* border: 1px solid black; */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-radius: 15px;
+            box-shadow: 0px 1.4px 0px 1.4px #647f9283;
+            
+          }
+
+          .box:hover{
+            transform: scale(1.1);
+            transition:300ms all ease-in-out ;
+          }
+    .box h2 {
+            font-size: 22px;
+            font-weight: bold;
+            font-family: poppins;
+            color: #000000;
+            opacity: 70%;
+
+}
+
+.box h3 {
+            font-size: 28px;
+            font-weight:500;
+            font-family: poppins;
+
+            color: #6D3030;
+
+
+}
+
+
+.line1{
+    width: 1px;
+    height: 420px;
+    background: black;
+}
+   
+         
+.bottom{
+    display: flex;
+    flex-direction: row;
+    gap: 110px;
+
+}
+
+
+.upper, .lower {
+    position: absolute;
+    width: 100%;
+    height: 80px;
+    z-index: 10;
+}
+
+.upper {
+    top: 0;
+    background: linear-gradient(to bottom, rgb(255, 255, 255), rgba(244, 248, 255, 0));
+}
+
+.lower {
+    bottom: 0;
+    background: linear-gradient(to top, rgb(255, 255, 255), rgba(244, 248, 255, 0));
+}
+
+.moveimage{
+    position: absolute;
+    height: auto;
+    object-fit: cover;
+}
+
+
+
+.imageanimation {
+    
+    position: relative;
+    width: 500px; 
+    height: 500px;
+    overflow: hidden;
+}
+
+
+
+.moveimage {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    animation: scrollImage 10s linear infinite;
+}
+
+.para{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Keyframe Animation */
+@keyframes scrollImage {
+    0% {
+        transform: translateY(0%);
+    }
+    100% {
+        transform: translateY(-50%);
+    }
+}
+
+
+
+.bubble-animate {
+  opacity: 0;
+  /* transform: translateY(-200px); */
+  animation: fallIn 2s ease-out forwards;
+}
+
+
+
+@keyframes fallIn {
+from{
+    transform: scale(0);
+    
+
+}
+  to {
+    
+    transform: scale(1);
+    transition: 50ms all ease-in-out;
+    opacity: 1;
+  }
+}
+
+
+
+
+.logo1{
+        cursor: pointer;
+}
+
+
+.circle{
+  width: 90px;
+  height: 90px;
+  background: #8A9FB0;
+  z-index:1;
+  /* right: px; */
+  border-radius: 50%;
+  position: absolute;
+  opacity: 20%;
+  top: 330px;
+  left: 700px;
+}
+
+
+.circle1{
+  width: 90px;
+  height: 90px;
+  background: #8A9FB0;
+  z-index:1;
+  /* right: px; */
+  border-radius: 50%;
+  position: absolute;
+  opacity: 20%;
+  top: 120px;
+  left: 500px;
+}
+
+.circle2{
+  width: 90px;
+  height: 90px;
+  background: #8A9FB0;
+  z-index:1;
+  /* right: px; */
+  border-radius: 50%;
+  position: absolute;
+  opacity: 20%;
+  top: 100px;
+  left: 390px;
+}
+
+
+.circle3{
+  width: 90px;
+  height: 90px;
+  background: #8A9FB0;
+  z-index:1;
+  /* right: px; */
+  border-radius: 50%;
+  position: absolute;
+  opacity: 20%;
+  top: 270px;
+  left: 900px;
+}
+
+.circle4{
+  width: 90px;
+  height: 90px;
+  background: #8A9FB0;
+  z-index:1;
+  /* right: px; */
+  border-radius: 50%;
+  position: absolute;
+  opacity: 20%;
+  top: 30px;
+  left: 80px;
+}
+.circle5{
+  width: 90px;
+  height: 90px;
+  background: #8A9FB0;
+  z-index:1;
+  /* right: px; */
+  border-radius: 50%;
+  position: absolute;
+  opacity: 20%;
+  top: 30px;
+  left: 190px;
+}
+
+
+.circle ,.circle1{
+
+  animation: ani 10s infinite ease-out forwards;
+}
+
+
+
+@keyframes ani {
+25%{
+    transform: translateX(100px);
+    transition: 50ms all ease-in-out;
+
+}
+  50%{
+    
+    transform: translateX(0px);
+    transition: 50ms all ease-in-out;
+    
+  }
+  75%{
+    transform: translateX(100px);
+    transition: 50ms all ease-in-out;
+
+}
+100%{
+    
+    transform: translateX(0px);
+    transition: 50ms all ease-in-out;
+    
+  }
+
+}
+
+.circle2,.circle3 {
+
+animation: ani1 10s infinite ease-out forwards;
+}
+
+
+
+@keyframes ani1 {
+  25%{
+  transform: translatey(60px);
+  transition: 50ms all ease-out;
+
+}
+50%{
+  
+  transform: translateY(0px);
+  transition: 50ms all ease-in;
+  
+}
+75%{
+  transform: translateY(60px);
+  transition: 50ms all ease-out;
+
+}
+100%{
+  
+  transform: translateY(0px);
+  transition: 50ms all ease-in;
+  
+}
+
+}
+.circle4 {
+
+animation: ani2 10s infinite ease-out forwards;
+}
+
+@keyframes ani2 {
+  25%{
+  transform: translatey(60px);
+  transition: 50ms all ease-out;
+
+}
+50%{
+  
+  transform: translateY(0px);
+  transition: 50ms all ease-in;
+  
+}
+75%{
+  transform: translateY(60px);
+  transition: 50ms all ease-out;
+
+}
+100%{
+  
+  transform: translateY(0px);
+  transition: 50ms all ease-in;
+  
+}
+}
+
+.circle5{
+
+animation: ani3 10s infinite ease-out forwards;
+}
+@keyframes ani3 {
+  25%{
+  transform: translateX(100px);
+  transition: 50ms all ease-out;
+
+}
+50%{
+  
+  transform: translateX(0px);
+  transition: 50ms all ease-in;
+  
+}
+75%{
+  transform: translateX(100px);
+  transition: 50ms all ease-out;
+
+}
+100%{
+  
+  transform: translateX(0px);
+  transition: 50ms all ease-in;
+  
+}
+}
+
+/* media querry */
+@media screen and (max-width: 768px) {
+
+.wrapper {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.navbar {
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 10px 20px;
+  height: auto;
+}
+
+.logo {
+  width: 57px;
+  height: 28px;
+  margin: 10px 0;
+}
+
+.nav-item {
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 12px;
+  padding: 12px 0;
+}
+.hero{
+width: 100vw;
+height: 242px;
+}
+
+
+
+.dropdown {
+  
+      position: relative;
+      display: inline-block;
+      font-size: 8.04px;
+    
+}
+
+
+.hero-container {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  
+}
+
+.text {
+    position: absolute;
+  top: 20px;
+  left: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-left: 10px;
+}
+
+.text1 P {
+  font-size: 12px;
+  
+}
+
+
+.b1 {
+  width: 140px;
+  gap: 3px;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  height:40px;
+  font-size: 12px;
+  border-radius: 8px;
+  margin-top: 1px;
+}
+.b1 img{
+            width: 12px;
+            height: 12px;
+            /* font-weight: bold; */
+            /* padding: 1px; */
+          }
+.img1, .img2, .img3, .img4 {
+  /* position: absolute;
+  top: 15px; */
+  margin-top: 20px;
+  text-align: center;
+  width: 35px;
+  height: 35px;
+}
+
+.img2{
+    top: 23px;
+}
+.img1{
+    right: 50px;
+    top:2px
+}
+
+.img3{
+    top:-20px
+}
+.loan{
+    width: 35px;
+  height: 35px;
+}
+
+.bubble-animate p{
+    font-size: 6px;
+}
+
+
+.trust {
+  padding: 20px;
+  background-image:linear-gradient(to right,#647f9283  ,#fafafa ) ;
+
+  height: 420px;
+}
+
+.circle,.circle1,.circle2,.circle3,.circle4,.circle5{
+  width: 40px;
+  height: 40px;
+  
+}
+
+.p1 {
+  font-size: 15px;
+  margin-top: -20px;
+  /* text-align: center; */
+}
+.l1{
+    width: 39px;
+    height: 8px;
+    margin-top: -20px;
+}
+
+.p2 h6 {
+  font-size: 18px;
+  text-align: center;
+}
+
+.stats-section {
+
+  grid-template-columns:162px 162px;
+  grid-template-rows: 65px 65px;
+  gap: 10px;
+  margin-top: 60px;
+  margin-left: 300px;
+  padding-left: 16px;
+  padding-right: 16px;
+  
+}
+
+.box h2 {
+  font-size: 15px;
+}
+
+.box h3 {
+  font-size: 15px;
+}
+
+.bottom {
+    flex-direction: column;
+    align-items: center;
+    height: 162px;
+    gap: 0px; 
+    margin-top: -25px;
+}
+
+.box:hover{
+            transform: scale(1.1);
+            transition:300ms all ease-in-out ;
+          }
+.line1 {
+  display: none;
+
+}
+
+.imageanimation {
+    display: none;
+}
+
+
+
+
+
+
+
+}
+
+
+.strip{
+  width: 100vw;
+  height: 58px;
+  background: #012C4A;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.strip h5{
+  color: white;
+  font-size: 15px;
+font-family: poppins;
+}
+
+
+.advice{
+  width: 100vw;
+  background-image: linear-gradient(to right ,#C0CAD1,#D7DADB,#E7F1F3);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.advice1{
+  width: 1230px;
+  height: 580px;
+  margin-left: 1px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border: #012C4A;
+  box-shadow: 0px 1.4px 0px 1.4px #647f9283;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 35px;
+  gap: 30px;
+  border-radius: 15px;
+  /* justify-content: center; */
+  /* position: absolute;
+  top: ; */
+}
+
+.advice1 h1{
+  font-size: 48px;
+  font-weight: bold;
+  font-family: poppins;
+  color: #012C4A;
+}
+
+.advice1 h3{
+  font-size: 24px;
+  font-weight: bold;
+  font-family: poppins;
+  color: #6B7280;
+}
+
+.video{
+  display: flex;
+  flex-direction: row;
+  gap: 35px;
+
+}
+
+.vid{
+  width: 200px;
+  height: 350px;
+  /* background: black; */
+  /* border-radius: 20px; */
+}
+
+
+.calculator{
+  width: 100vw;
+  background-image: linear-gradient(to right ,#C0CAD1,#D7DADB,#E7F1F3);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 35px;
+
+}
+
+.cal{
+  background: #E5E7EB;
+  width: 708px;
+  height: 456px;
+display: flex;
+flex-direction: column;
+padding-left: 150px;
+gap: 25px;
+padding-top: 40px;
+padding-right: 30px;
+}
+
+.cal h1{
+  color: #012C4A;
+  font-family: poppins;
+  font-weight: bold;
+  font-size: 40px;
+}
+
+.cal h3{
+  color: #6B7280;
+  font-weight: normal;
+  font-size: 16px;
+  font-family:poppins;
+
+}
+
+
+.graph{
+  
+  background: #E5E7EB;
+  width: 708px;
+  height: 456px;
+display: flex;
+flex-direction: column;
+padding-right: 150px;
+gap: 25px;
+padding-top: 40px;
+padding-left: 30px;
+}
+
+.graph h1{
+  color: #012C4A;
+  font-family: poppins;
+  font-weight: bold;
+  font-size: 40px;
+  margin-left: 99px;
+}
+
+.first{
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.second{
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+
+
+.loan_amount{
+  display: flex;
+  flex-direction:row;
+  justify-content: space-between;
+
+}
+
+.loan_amount p:nth-child(1){
+  font-size: 20px;
+  font-weight: bold;
+  color: #012C4A;
+  font-family: poppins;
+
+}
+
+.loan_amount p:nth-child(2){
+  font-size: 20px;
+  font-weight: normal;
+  color: #6B7280;
+  font-family: poppins; 
+}
+
+.credit_debt{
+  display: flex;
+  flex-direction:row;
+  justify-content: space-between;
+
+}
+
+.credit_debt p:nth-child(1){
+  font-size: 20px;
+  font-weight: bold;
+  color: #012C4A;
+  font-family: poppins;
+
+}
+
+.credit_debt p:nth-child(2){
+  font-size: 20px;
+  font-weight: normal;
+  color: #6B7280;
+  font-family: poppins; 
+}
+
+[creditDebt-length] input{
+  width: 70px;
+  height: 25px;
+}
+
+[loanAmount-length] input{
+  width: 70px;
+  height: 25px;
+}
+.slider{
+    appearance: none;
+    width: 100%;
+    height: 0.40rem;
+    /* background-repeat: no-repeat; */
+    cursor :pointer;
+    background-color: #012C4A;
+    border-radius: 2rem;
+    border: none;
+   
+
+   
+}
+
+.slider::-webkit-slider-thumb{
+    position: relative; 
+    appearance: none;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: white;
+    border-radius: 50%;
+    cursor: pointer;
+   outline: 2px solid #012C4A;
+    
+}
+
+
+.slider::-webkit-slider-thumb:hover{ 
+outline:2px solid #012C4A;
+
+background-color: #6B7280;
+
+}
+
+
+#loanInput{
+  border-radius: 5px 5px 5px 5px;
+  border: 2px solid #012C4A;
+  text-align: center;
+  color: #6B7280;
+  font-size: 20px;
+  font-family: poppins;
+}
+
+#creditInput{
+  border-radius: 5px 5px 5px 5px;
+  border: 2px solid #012C4A;
+  text-align: center;
+  color: #6B7280;
+  font-size: 20px;
+  font-family: poppins;
+}
+
+.cal{
+  border-radius: 0 15px 15px 0 ;
+}
+
+.graph{
+  border-radius: 15px 0 0 15px ;
+   display: flex;
+  flex-direction: column;
+  gap: 1px;
+
+  
+}
+
+.cal p{
+  color: #012C4A;
+  font-family: poppins;
+  font-size: 15px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 26px;
+
+}
+
+#toggleText{
+  font-size: 15px;
+  font-family: poppins;
+  font-weight: bold;
+  color: #4CAF50;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider3 {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 26px;
+}
+
+.slider3:before {
+  position: absolute;
+  content: "";
+  height: 22px;
+  width: 22px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider3 {
+  background-color: #4CAF50; 
+}
+
+input:checked + .slider3:before {
+  transform: translateX(24px);
+}
+
+.togglebutton1{
+  display: flex;
+  flex-direction: row;
+  /* justify-content: center; */
+  align-items: center;
+  gap: 10px;
+}
+
+
+
+
+.bars {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end; /* <-- This is key */
+  gap: 40px;
+  height: 200px; /* Set a fixed height to control vertical space */
+  margin: 30px auto;
+  position: relative;
+}
+
+
+
+#bar, #bar1 {
+  width: 100px;
+  background-color: #4CAF50;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  border-radius: 6px 6px 0 0;
+  transition: height 0.3s ease;
+}
+
+
+#bar p{
+  font-size: 10px;
+  font-weight: bold;
+  font-family: poppins;
+  color: white;
+  
+}
+
+#bar1 p{
+  font-size: 10px;
+  font-weight: bold;
+  font-family: poppins;
+  color: white;
+}
+
+
+.barFirst{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.barFirst p:nth-child(2){
+  text-align: center;
+
+}
+
+.barSecond{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.barSecond p:nth-child(2){
+  text-align: center;
+  /* margin-right: 30px; */
+}
+
+.overall{
+  display: flex;
+  flex-direction: row;
+  width: 486px;
+  height: 78px;
+  margin-left:40px;
+  box-shadow: 0px 1.4px 0px 1.4px #647f9283;
+  justify-content: space-between;
+  border-radius: 15px;
+}
+
+.leftSide{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 10px;
+}
+
+.leftSide h4{
+  color: #012C4A;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: poppins;
+}
+
+.rightSide{
+  width: 194px;
+  height: 78px;
+  background: #81B29A;
+  display: flex;
+  /* justify-content: center; */
+align-items: center;
+padding-left: 10px;
+border-radius: 0 15px 15px 0;
+}
+.rightSide h5{
+  color: #012C4A;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: poppins;
+}
+
+.align{
+  display: flex;
+  flex-direction: row;
+
+}
+.align p{
+  color: #4CAF50;
+  font-size: 14px;
+  font-family: poppins;
+  font-weight: bold;
+}
+.align1{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+
+}
+
+.align1 p{
+  color: white;
+  font-size: 14px;
+  font-family: poppins;
+  font-weight: bold;
+}
+.barFirst p{
+  color: #012C4A;
+  font-family: poppins;
+  font-weight: bold;
+}
+
+
+.barSecond p{
+  color: #012C4A;
+  font-family: poppins;
+  font-weight: bold;
+}
+
+.updatButton{
+  border-radius: 5px;
+  /* border:2px solid #012C4A; */
+  box-shadow: 0px 1.4px 0px 1.4px #647f9283;
+  margin-left: 100px;
+  width: 100px;
+  height: 30px;
+  background: #CCCCCC;
+}
+
+.updatButton:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+  background: #4CAF50;
+}
+
+@media screen and (max-width: 768px){
+  .strip{
+    width: 100vw;
+    height: 30px;
+  }
+
+  .strip h5{
+    font-size: 6px;
+  }
+
+
+.advice{
+  width: 100vw;
+align-items: center;
+display: flex;
+justify-content: center;
+margin: auto;
+}
+
+
+.advice1{
+  height: 95%;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 20px;
+  /* margin-top: 35px; */
+/*margin-bottom: 30px; */
+}
+
+.advice1 h1{
+  font-size: 16px;
+ 
+}
+
+
+.advice1 h3{
+  font-size: 8px;
+}
+
+.video{
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+
+}
+
+.vid{
+  width: 60px;
+  height: 100px;
+
+  /* background: black; */
+  /* border-radius: 20px; */
+}
+
+
+.calculator{
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.cal{
+  width: 90%;
+  height: 50%;
+margin-left: 20px;
+margin-right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  border-radius: 10px;
+
+}
+
+
+.cal h1{
+  font-size: 16px;
+}
+
+.cal h3{
+  font-size: 8px;
+}
+
+.loan_amount p:nth-child(1){
+  font-size: 12px;
+}
+
+.loan_amount p:nth-child(2){
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+}
+
+.credit_debt p:nth-child(1){
+  font-size: 12px;
+}
+.credit_debt p:nth-child(2){
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+}
+
+
+.first{
+  width: 90%;
+  /* padding: 10px; */
+}
+.second{
+  width: 90%;
+  /* padding: 10px; */
+}
+
+
+#loanInput{
+  width: 60px;
+  height: 20px;
+  font-size: 8px;
+}
+
+#creditInput{
+  width: 60px;
+  height: 20px;
+  font-size: 8px;
+}
+
+.togglebutton{
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  
+
+}
+
+
+.togglebutton p{
+  font-size: 8px;
+}
+
+.graph{
+  width: 90%;
+  height: 50%;
+  margin-top:10px ;
+margin-left: 20px;
+margin-right: 20px;
+/* margin: auto; */
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+  padding: 15px;
+  border-radius: 10px;
+
+}
+
+.graph h1{
+  font-size: 16px;
+  padding: auto;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.bars {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center; 
+  gap: 100px; 
+  margin: 20px auto; 
+}
+
+
+
+.overall{
+  width: 90%;
+  height: 60px;
+  margin: auto;
+}
+
+.align h4{
+  font-size: 8px;
+
+}
+.align p{
+  font-size: 8px;
+}
+
+.align1 h5{
+  font-size: 8px;
+}
+
+.align1 p{
+  font-size: 8px;
+}
+
+.rightSide{
+  width: 35%; 
+  height: 60px;
+}
+
+.leftSide{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+ 
+}
+
+
+.barFirst{
+  width: 50px;
+ 
+}
+
+.barSecond{
+  width: 50px;
+
+}
+
+.barFirst p:nth-child(2){
+  font-size: 8px;
+}
+
+
+.barSecond p:nth-child(2){
+  font-size: 8px;
+}
+
+
+
+
+}
+
+
+    </style>
+<div class="wrapper">
+
+
+    <!-- hero section -->
+    <nav class="navbar">
+        <div class="logo1">
+        <img class="logo" src="./assets/logo.png" alt="logo" >
+         <a  href="#"></a>
+</div>
+        <span class="nav-item" >
+        <h6 >HOME</h6>
+        <div class="dropdown">
+          <a href="#">SERVICES <i class="fas fa-chevron-down"></i></a>
+          <div class="dropdown-content">
+            <a href="#">Option 1</a>
+            <a href="#">Option 2</a>
+            <a href="#">Option 3</a>
+          </div>
+        </div>
+        <!-- <h6>SERVICES</h6> -->
+        <div class="dropdown">
+          <a href="#">CONTACT US <i class="fas fa-chevron-down"></i></a>
+          <div class="dropdown-content">
+            <a href="#">hi hi</a>
+            <a href="#">Option 2</a>
+            <a href="#">Option 3</a>
+          </div>
+        </div>
+        <!-- <h6></h6> -->
+        <!-- <h6>ABOUT US</h6> -->
+        <div class="dropdown">
+          <a href="#">ABOUT <i class="fas fa-chevron-down"></i></a>
+          <div class="dropdown-content">
+            <a href="#">About Us</a>
+            <a href="#">Privacy Policy</a>
+          
+          </div>
+        </div>
+        <h6>BLOG</h6>
+        </span>
+    </nav>
+
+    <!--hero-->
+
+    <div class="hero-container"> 
+<img class="hero" src="./assets/hero_img.png" alt="hero">
+   
+
+
+   <!-- left -->
+    <div class="text">
+<span class="text1">
+    <p>Settle Your Debt</p>
+    <p class="third">Legally.Easily. With Experts.</p>
+    <!-- <p class="third"></p> -->
+</span>
+<button class="b1">
+    Free Consultation
+    <img src="./assets/call.png" alt="phone">
+</button>
+    </div>
+
+
+
+    <div class="circle1"></div>
+    <div class="circle"></div>
+    <div class="circle2"></div>
+    <div class="circle3"></div>
+    <div class="circle4"></div>
+    <div class="circle5"></div>
+
+    <!-- right -->
+     
+        <div class="img1 bubble-animate">
+            <div class="para">
+        <img class="loan" src="./assets/loan.png" alt="loan">
+        <p>Loan Advisor</p>
+    </div>
+    </div>
+
+    <div class="img2 bubble-animate">
+        <div class="para">
+        <img class="loan" src="./assets/burden.png" alt="loan burden">
+        <p>Reduce Loan </p>
+            <p>Burden</p>
+        </div>
+    </div>
+
+    <div class="img3 bubble-animate">
+        <div class="para">
+        <img class="loan" src="./assets/bank.png" alt="bank">
+        
+        <p>No Bank </p>
+        <p>Harrasment</p>
+</div>
+        
+    </div>
+    <div class="img4 bubble-animate">
+        <div class="para">
+        <img class="loan" src="./assets/free consultance.png" alt="Consultation">
+        
+        
+        <p>Free</p>
+            <p> Consultation </p>
+    </div>
+        
+    </div>
+   
+   </div>
+
+
+
+     <!--trust-->
+     <div class="trust">
+        <div class="top"> 
+<h1 class="p1">India’s Most Trusted Loan Resolution Platform</h1>
+<div class="l1"></div>
+
+<!--headings-->
+
+<div class="p2">
+<h6 >We’ve helped thousands achieve debt relief with support from </h6>
+    <h6 >India’s top banks & NBFCs.</h6>
+</div>
+</div>
+
+
+<!--bottom portion-->
+<div class="bottom">
+<!--stats-->
+    <section class="stats-section">
+        <div class="box" id="box1">
+            
+          <span id="stats"><h3>15000+ </h3>
+          <!-- <img src="./assets/client.png" alt="clients"> -->
+          <!-- <i class="fa-solid fa-person"></i> -->
+          </span>
+            <h2>Happy Client</h2>
+        </div>
+       
+        <div class="box " id="box2" > 
+            
+          <span id="stats"><h3>23,000+ </h3>
+          <!-- <img src="./assets/money.png" alt="money"> -->
+          </span>
+            <h2>Loan Resolved</h2>
+        </div>
+        
+        <div class="box" id="box3">
+            <span id="stats"><h3>100+ </h3>
+            <!-- <img src="./assets/member.png" alt="members"> -->
+            </span>
+            <h2>Team Members</h2>
+        </div>
+        <div class="box" id="box4">
+            <span id="stats"><h3>15+</h3>
+            <!-- <img src="./assets/states.png" alt="flag"> -->
+            </span>
+            <h2>States Served</h2>
+        </div>
+        
+      </section>
+
+
+
+      <div class="line1"></div>
+    
+      
+    
+
+ <!--trust-->     
+<div class="imageanimation"> 
+
+    <div  class="upper">
+        
+      
+    </div>
+
+    <div class="moveimage">
+        <img src="./assets/banks.png" alt="" width="400px">
+        <img src="./assets/banks.png" alt="" width="400px">
+      </div>
+      
+
+    <div  class="lower"></div>
+    </div>
+
+</div>
+
+
+
+    </div>
+
+
+
+    <!-- strip -->
+    <div class="strip">
+<h5>Need Help? Call Us at 1800-XXX-XXXX           </h5>
+<h5>|</h5>
+<h5>Chat with an Expert         </h5>
+<h5>|</h5>
+<h5> Available 9 AM – 7 PM All Days</h5>
+    </div>
+
+
+    <div class="advice">
+<div class="advice1">
+<h1>Expert Advice In Action</h1>
+<h3>Hear from our expert advisors as they help clients tackle debt and regain control.</h3>
+<div class="video">
+    <span class="vid">
+      <video width="100%"  height="100%" controls>
+        <source src="./assets/ep4.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </span>
+    <span class="vid">
+      <video width="100%" height="100%" controls>
+        <source src="./assets/ep2.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </span>
+    <span class="vid">
+      <video width="100%" height="100%" controls>
+        <source src="./assets/ep1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </span>
+</div>
+</div>
+    </div>
+
+
+
+    <div class="calculator">
+
+<div class="cal">
+<h1>Cut Your Debt Burden</h1>
+<h3>कर्ज़ से आज़ादी की ओर पहला क़दम</h3>
+
+
+<!--first slider-->
+<div class="first">
+<div class="loan_amount">
+  <p>Loan Amount</p>
+  
+  <p>
+    ₹
+    <input  type="number" id="loanInput" min="50000" max="10000000" step="1" value="100000">
+  </p>
+</div>
+
+<!--slider-->
+<input type="range" min="50000" max="10000000"  class="slider" step="1" loanAmount-slider>
+
+</div>
+
+<!--second slider-->
+<div class="second">
+  <div class="credit_debt">
+    <p>Credit Card Debt</p>
+    
+    <p>
+      ₹
+      <input  type="number" id="creditInput" min="1000000" max="10000000" step="1" value="100000">
+      </p>
+  </div>
+  
+  <!--slider-->
+  <input type="range" min="100000" max="10000000"  class="slider" step="1" creditDebt-slider>
+  
+  </div>
+
+
+  <div class="togglebutton">
+<p>Have you missed any Loan EMI/Payment in the last 3 months?</p>
+
+<div class="togglebutton1">
+<label class="switch">
+  <input type="checkbox" id="emiToggle">
+  <span class="slider3"></span>
+</label>
+<span id="toggleText">No</span>
+
+
+<button class="updatButton" onclick="updateBar()">Update</button>
+</div>
+</div>
+
+
+
+
+
+
+</div>
+
+<div class="graph">
+  <h1>Settlement Outcome</h1>
+  <div class="bars">
+    <div class="barFirst">
+      <div id="bar" style="width: 100px; min-height: 50px; max-height: 200px; background: #4CAF50; ">
+        <p id="valueBar1"></p>
+      </div>
+      <p>Without Cut My Loan</p>
+    </div>
+
+    <div class="barSecond">
+      <div id="bar1" style="width: 100px; min-height: 50px; max-height: 200px; background: #4CAF50; ">
+        <p id="valueBar2"></p>
+      </div>
+      <p>With Cut My Loan</p>
+    </div>
+  </div>
+
+  <div class="overall">
+    <div class="leftSide">
+      <div class="align">
+        <h4>Estimated Settlement:</h4>
+        <p id="valueBar4"></p>
+      </div>
+      <div class="align">
+        <h4>Original Total:</h4>
+        <p id="valueBar3"></p>
+      </div>
+    </div>
+    <div class="rightSide">
+      <div class="align1">
+        <h5>Saving Upto:</h5>
+        <p id="valueBar5"></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+
+
+
+     </div>
+
+
+
+
+
+
+
+<script>
+const valueBar1=document.getElementById('valueBar1');
+const valueBar2=document.getElementById('valueBar2');
+const valueBar3=document.getElementById('valueBar3');
+const valueBar4=document.getElementById('valueBar4');
+const valueBar5=document.getElementById('valueBar5');
+const loanInput = document.getElementById('loanInput');
+const creditInput=document.getElementById('creditInput');
+const loanSlider=document.querySelector("[loanAmount-slider ]");
+const creditSlider=document.querySelector("[creditDebt-slider]");
+
+let amountLength=100000;
+let creditLength=100000;
+
+
+
+
+function handleSlider(){
+    loanSlider.value=amountLength;
+    creditSlider.value=creditLength;
+    const min=loanSlider.min || creditSlider.min ;
+    const max=loanSlider.max || creditSlider.max ;
+    
+    loanSlider.style.backgroundSize=((amountLength-min)*100/(max-min))+"% 100%"
+    creditSlider.style.backgroundSize=((creditLength-min)*100/(max-min))+"% 100%"
+}
+
+handleSlider();
+
+loanSlider.addEventListener('input',(e)=>{
+    amountLength=e.target.value;
+    loanInput.value = loanSlider.value;
+
+    handleSlider();
+})
+
+loanInput.addEventListener('input', () => {
+      let val = Number(loanInput.value);
+      const min = Number(loanSlider.min);
+      const max = Number(loanSlider.max);
+
+      
+      if (val < min) val = min;
+      if (val > max) val = max;
+    
+      loanSlider.value = val;
+     
+    });
+
+
+    creditSlider.addEventListener('input',(e)=>{
+    creditLength=e.target.value;
+    creditInput.value = creditSlider.value;
+    handleSlider();
+})
+
+creditInput.addEventListener('input', () => {
+      let val = Number(creditInput.value);
+      const min = Number(creditSlider.min);
+      const max = Number(creditSlider.max);
+
+      
+      if (val < min) val = min;
+      if (val > max) val = max;
+    
+      creditSlider.value = val;
+      
+    });
+
+
+    const toggle = document.getElementById("emiToggle");
+const toggleText = document.getElementById("toggleText");
+// const value1=document.querySelector("[value1]")
+toggle.addEventListener("change", () => {
+  toggleText.textContent = toggle.checked ? "YES" : "NO";
+});
+
+function updateBar(){
+  const loan=parseInt(loanInput.value) || 0;
+  const credit=parseInt(creditInput.value) || 0;
+  const total=loan+credit;
+  valueBar1.innerText=total;
+valueBar2.innerText=(total*0.7).toFixed(2);
+valueBar3.innerText=total;
+valueBar4.innerText=(total*0.7).toFixed(2);
+
+valueBar5.innerText=(total-(total*0.7)).toFixed(2);
+  const bHeight=document.getElementById('bar').style.height = (total / 120000) + "px";
+  const b1Height=document.getElementById('bar1').style.height = ((total*0.7)/120000) + "px";
+
+}
+
+</script>
+
+
+
+
+
+</body>
+</html>
