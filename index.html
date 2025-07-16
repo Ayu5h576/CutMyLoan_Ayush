@@ -876,7 +876,7 @@ font-family: poppins;
 
 .advice1 h3{
   font-size: 24px;
-  font-weight: bold;
+  font-weight: normal;
   font-family: poppins;
   color: #6B7280;
 }
@@ -1413,6 +1413,17 @@ margin: auto;
     margin: auto;
   }
 
+  .video::-webkit-scrollbar {
+  height: 12px;
+    
+}
+
+.video::-webkit-scrollbar-thumb {
+  background-color: #28597B;
+  border-radius: 10px;
+
+}
+
   .vid {
     flex: 0 0 100%;
     scroll-snap-align: start;
@@ -1429,7 +1440,7 @@ margin: auto;
 
 .calculator{
   width: 100vw;
-  height: 600px;
+  height: 700px;
   padding-bottom: 20px;
   display: flex;
   flex-direction: column;
@@ -1438,7 +1449,7 @@ margin: auto;
 
 .cal{
   width: 90%;
-  height: 50%;
+  height: 60%;
 margin-left: 20px;
 margin-right: 20px;
   display: flex;
@@ -1447,6 +1458,7 @@ margin-right: 20px;
   justify-content: center;
   padding: 15px;
   border-radius: 10px;
+  gap: 10px;
 
 }
 
@@ -1518,7 +1530,7 @@ margin-right: 20px;
 
 .graph{
   width: 90%;
-  height: 50%;
+  height: 55%;
   margin-top:10px ;
 margin-left: 20px;
 margin-right: 20px;
@@ -1529,6 +1541,7 @@ margin-right: 20px;
   justify-content: center;
   padding: 15px;
   border-radius: 10px;
+  gap: 4px;
   /* padding-bottom: 300px; */
 
 }
@@ -2241,7 +2254,8 @@ font-family: poppins;
 .faq{
   display: flex;
   flex-direction: column;
- 
+ justify-content: center;
+ align-items: center;
   background-image: linear-gradient(to right ,#C0CAD1,#D7DADB,#E7F1F3);
   width: 100vw;
   padding:15px;
@@ -2274,7 +2288,7 @@ font-family: poppins;
 }
 
 .faq_item{
-  width: 348px;
+  width: 383px;
   min-height: 75px;
   max-height: 110px;
   border-radius: 20px;
