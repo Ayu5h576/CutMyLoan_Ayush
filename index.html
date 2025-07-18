@@ -2468,6 +2468,287 @@ font-family: poppins;
 
 
 }
+.section {
+      display: none;
+     
+    }
+    .active {
+      display: block;
+    }
+
+
+.c_Hero {
+  width: 100vw;
+  height: 375px;
+  position: relative;
+
+}
+.c_Hero img{
+  width: 100vw;
+  height: 375px;
+  
+}
+
+.c_Hero p{
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  font-size: 58px;
+font-weight: bold;
+font-family: poppins;
+color: white;
+
+}
+
+
+.c_main {
+  background-image: linear-gradient(to right ,#C0CAD1,#D7DADB,#E7F1F3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
+  padding:20px 150px;
+}
+.c_heading{
+  display: flex;
+  flex-direction: row;
+gap: 3px;
+  font-weight: bold;
+font-size: 40px;
+font-family: poppins;
+}
+.c_heading :nth-child(1){
+color: #012C4A;
+}
+
+.c_heading :nth-child(2){
+  color: #28597B;
+}
+
+
+.para1{
+  color: #4B5563;
+  font-size: 16px;
+  font-family: sans-serif;
+}
+
+.c_button{
+  display: flex;
+  gap: 50px;
+
+}
+.contactbutton{
+  cursor: pointer;
+  width: 150px;
+  height: 100px;
+  border-radius: 10px;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
+  background:  #28597B;
+}
+
+
+.contactbutton i{
+  font-size: 28px;
+}
+
+
+
+
+.contactbutton p{
+  font-size: 20px;
+  font-weight: bold;
+  font-family: sans-serif;
+  color: white;
+}
+
+
+.active3{
+background-color: #5E8199;
+  color: white;
+}
+
+.c_card,
+.c_form {
+  display: none;
+}
+
+.active2{
+  display: flex;
+}
+
+
+
+
+
+.c_card{
+
+  flex-direction: row;
+  gap:30px;
+  
+
+
+}
+
+.c_card img{
+  width: 430px;
+  height: 520px;
+}
+.map{
+  width: 430px;
+  height: 520px;
+  background: black;
+  border-radius: 30px;
+}
+
+.information{
+width: 430px;
+  height: 520px;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  box-shadow: 2px 2px white 25%;
+   border-radius: 30px;
+   gap: 50px;
+   align-items: center;
+   padding: 10px;
+   /* justify-content: center; */
+}
+
+
+
+
+.information p:nth-child(1){
+  font-size: 40px;
+  font-weight: bold;
+  font-family: poppins;
+  color: #012C4A;
+}
+.i{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.i i{
+  font-size: 50px;
+}
+
+.i1 p:nth-child(1){
+  font-size: 22px;
+
+}
+
+.i1 p:nth-child(2){
+  font-size: 16;
+  color: #6B7280;
+  font-family: poppins;
+}
+
+
+.ii1{
+  margin-right: 55px;
+}
+
+.faq1{
+  width: 100vw;
+  height: 100px;
+display: flex;
+justify-content: center;
+align-items: center;
+background: #28597B;
+}
+.faq1 p{
+  font-size: 22px;
+  /* font-weight: bold; */
+  font-family: poppins;
+  color: white;
+
+}
+.faq1 a{
+  color: #4CAF50;
+  cursor: pointer;
+}
+
+
+
+.c_form {
+
+  background: transparent;
+  
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+
+}
+
+.c_form p{
+  
+  font-size: 32px;
+  font-weight: bold;
+  color: #012C4A;
+  font-family: poppins;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-row {
+  width: 700px;
+  height: 70px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.input4,
+.select4,
+.textarea4 {
+  flex: 1;
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: poppins;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+
+.textarea4 {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.button4 {
+  padding: 12px 24px;
+  background-color: #11557c;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  width: fit-content;
+  transition: background-color 0.3s ease;
+}
+
+.button4:hover {
+  background-color: #0d4566;
+}
+
 
 
     </style>
@@ -2481,7 +2762,8 @@ font-family: poppins;
          <a  href="#"></a>
 </div>
         <span class="nav-item" >
-        <h6 >HOME</h6>
+          <h6><a onclick="showSection('home')">Home</a></h6>
+        
         <div class="dropdown">
           <a href="#">SERVICES <i class="fas fa-chevron-down"></i></a>
           <div class="dropdown-content">
@@ -2492,11 +2774,10 @@ font-family: poppins;
         </div>
         <!-- <h6>SERVICES</h6> -->
         <div class="dropdown">
-          <a href="#">CONTACT US <i class="fas fa-chevron-down"></i></a>
+          <a href="#">SUPPORT <i class="fas fa-chevron-down"></i></a>
           <div class="dropdown-content">
-            <a href="#">hi hi</a>
-            <a href="#">Option 2</a>
-            <a href="#">Option 3</a>
+            <a onclick="showSection('contactUs')">Contact Us</a>
+            <a href="#">FAQ</a>
           </div>
         </div>
         <!-- <h6></h6> -->
@@ -2513,9 +2794,11 @@ font-family: poppins;
         </span>
     </nav>
 
-    <!--hero-->
-
-    <div class="hero-container"> 
+  
+<!-- home -->
+    <div id="home" class="section active">
+    <!--hero--> 
+     <div class="hero-container" > 
 <img class="hero" src="./assets/hero_img.png" alt="hero">
    
 
@@ -2999,6 +3282,110 @@ font-family: poppins;
 </div>
 
 
+</div>
+
+
+<div id="contactUs" class="section">
+    
+
+<div class="c_Hero">
+  <img src="./assets/Contact hero.png" alt="">
+  <p>Contact Us</p>
+</div>
+
+<div class="c_main">
+<span class="c_heading">
+  <p>CutMyLoan –</p>
+  <p> Get Debt-Free Guidance Today</p>
+</span>
+<p class="para1">Reach out to CutMyLoan’s debt relief experts for personalized loan guidance. Call, email, or fill our contact form to start your debt-free journey today.</p>
+<div class="c_button">
+  <button class="contactbutton" id="c_button1">
+    <i class="fa-solid fa-address-book" style="color: #81b29a;"></i>
+    <p>Contact Info</p>
+  </button>
+  <button class="contactbutton" id="c_button2">
+     <i class="fa-solid fa-address-card" style="color: #81b29a;"></i>
+    <p>Contact Form</p>
+  </button>
+
+</div>
+<div class="c_card" id="c_card">
+  
+    <img src="./assets/map.png" alt="">
+  
+  <div class="information">
+    <p>Get In Touch</p>
+   
+    <div class="i ii1">
+      <i class="fa-solid fa-square-phone" style="color: #81b29a;"></i>
+      <span class="i1 ">
+        <p>Phone</p>
+        <p>+91 9738783787</p>
+      </span>
+    </div>
+    <div class="i">
+      <i class="fa-solid fa-envelope" style="color: #81b29a;"></i>
+      <span class="i1">
+        <p>Email</p>
+        <p>Info@cutmyloan.com</p>
+      </span>
+    </div>
+    <div class="i">
+      <i class="fa-solid fa-location-dot" style="color: #81b29a;"></i>
+      <span class="i1">
+        <p>Head Office</p>
+        <p>lorem ipsum xc jsn dsd</p>
+      </span>
+    </div>
+
+
+  </div>
+</div>
+
+
+
+<div class="c_form" id="c_form">
+  <p>We Listen. We Help. We Fight for You.</p>
+    <form>
+      <div class="form-row">
+        <input class="input4" type="text" placeholder="First Name *" required />
+        <input class="input4" type="text" placeholder="Last Name *" required />
+      </div>
+
+      <div class="form-row">
+        <input class="input4" type="email" placeholder="Email *" required />
+        <input class="input4" type="tel" placeholder="Phone No *" required />
+      </div>
+
+      <div class="form-row">
+        <input class="input4" type="text" placeholder="Loan Amount *" required />
+        <select class="select4" required>
+          <option value="" disabled selected>Loan Type *</option>
+          <option value="home">Home Loan</option>
+          <option value="personal">Personal Loan</option>
+          <option value="business">Business Loan</option>
+        </select>
+      </div>
+
+      <textarea class="textarea4" placeholder="Problem Discription *" required></textarea>
+
+      <button class="button4" type="submit">Submit</button>
+    </form>
+  </div>
+
+
+</div>
+
+
+
+<div class="faq1">
+  <p>Have more questions? Check our <a href="">Frequently Asked Questions</a> for answers before contacting us.</p>
+</div>
+
+
+
+  </div>
 
 
 
@@ -3063,161 +3450,11 @@ font-family: poppins;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
      </div>
 
 
 
-
-
-
-
-<script>
-const valueBar1=document.getElementById('valueBar1');
-const valueBar2=document.getElementById('valueBar2');
-const valueBar3=document.getElementById('valueBar3');
-const valueBar4=document.getElementById('valueBar4');
-const valueBar5=document.getElementById('valueBar5');
-const loanInput = document.getElementById('loanInput');
-const creditInput=document.getElementById('creditInput');
-const loanSlider=document.querySelector("[loanAmount-slider ]");
-const creditSlider=document.querySelector("[creditDebt-slider]");
-
-let amountLength=100000;
-let creditLength=100000;
-
-
-
-
-function handleSlider(){
-    loanSlider.value=amountLength;
-    creditSlider.value=creditLength;
-    const min=loanSlider.min || creditSlider.min ;
-    const max=loanSlider.max || creditSlider.max ;
-    
-    loanSlider.style.backgroundSize=((amountLength-min)*100/(max-min))+"% 100%"
-    creditSlider.style.backgroundSize=((creditLength-min)*100/(max-min))+"% 100%"
-}
-
-handleSlider();
-
-loanSlider.addEventListener('input',(e)=>{
-    amountLength=e.target.value;
-    loanInput.value = loanSlider.value;
-
-    handleSlider();
-})
-
-loanInput.addEventListener('input', () => {
-      let val = Number(loanInput.value);
-      const min = Number(loanSlider.min);
-      const max = Number(loanSlider.max);
-
-      
-      if (val < min) val = min;
-      if (val > max) val = max;
-    
-      loanSlider.value = val;
-     
-    });
-
-
-    creditSlider.addEventListener('input',(e)=>{
-    creditLength=e.target.value;
-    creditInput.value = creditSlider.value;
-    handleSlider();
-})
-
-creditInput.addEventListener('input', () => {
-      let val = Number(creditInput.value);
-      const min = Number(creditSlider.min);
-      const max = Number(creditSlider.max);
-
-      
-      if (val < min) val = min;
-      if (val > max) val = max;
-    
-      creditSlider.value = val;
-      
-    });
-
-
-    const toggle = document.getElementById("emiToggle");
-const toggleText = document.getElementById("toggleText");
-// const value1=document.querySelector("[value1]")
-toggle.addEventListener("change", () => {
-  toggleText.textContent = toggle.checked ? "YES" : "NO";
-});
-
-function updateBar(){
-  const loan=parseInt(loanInput.value) || 0;
-  const credit=parseInt(creditInput.value) || 0;
-  const total=loan+credit;
-  valueBar1.innerText=total;
-valueBar2.innerText=(total*0.7).toFixed(2);
-valueBar3.innerText=total;
-valueBar4.innerText=(total*0.7).toFixed(2);
-
-valueBar5.innerText=(total-(total*0.7)).toFixed(2);
-  const bHeight=document.getElementById('bar').style.height = (total / 120000) + "px";
-  const b1Height=document.getElementById('bar1').style.height = ((total*0.7)/120000) + "px";
-
-}
-
-
-
-
-  const faqItems = document.querySelectorAll('.faq_item');
-
-faqItems.forEach(item=>{
-const question = item.querySelector('.question');
-    const answer = item.querySelector('.answer');
-    const btn = item.querySelector('.faq_btn');
-
-  question.addEventListener('click', () => {
-      const isOpen = answer.style.display === 'block';
-
-document.querySelectorAll('.answer').forEach(a => a.style.display = 'none');
-      document.querySelectorAll('.faq_btn').forEach(b => b.textContent = '+');
-
-
-if (!isOpen) {
-        answer.style.display = 'block';
-        btn.textContent = '−';
-      } else {
-        answer.style.display = 'none';
-        btn.textContent = '+';
-      }
-
-
-
-  })
-})
-
-
-
-
-
-
-
-
-
-
-
-
-</script>
-
+<script src="./Script.js"></script>
 
 
 
