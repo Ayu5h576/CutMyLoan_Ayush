@@ -24,7 +24,7 @@
     height: 100vh;
     width: 100vw;
   overflow-x: hidden;
-    
+    /* background-image: linear-gradient(to right ,#C0CAD1,#D7DADB,#E7F1F3); */
 }
             .navbar{
                 position:sticky;
@@ -134,6 +134,7 @@
     transition: 50ms all ease-in-out;
 
             }
+           
             .logo{
                 width: 175px;
                 height: 79px;
@@ -2424,12 +2425,13 @@ font-family: poppins;
 
 
 .footer {
-    padding: 30px 20px;
+    padding: 10px 20px;
+   
   }
 
   .footer-container {
     flex-direction: column;
-    gap: 30px;
+    gap: 10px;
   }
 
   .footer-left {
@@ -2449,25 +2451,27 @@ font-family: poppins;
   .footer-links {
     display: grid;
     grid-template-columns: repeat(2, 1fr); 
-    gap: 20px;
+    gap: 10px;
     width: 100%;
   }
 
   .footer-links div {
     width: 100%;
+
   }
 
   .footer-bottom {
     text-align: center;
-    font-size: 13px;
+    font-size: 12px;
     padding-top: 20px;
     margin-top: 20px;
   }
 
-
-
-
 }
+
+
+
+
 .section {
       display: none;
      
@@ -2479,14 +2483,9 @@ font-family: poppins;
 
 .c_Hero {
   width: 100vw;
-  height: 375px;
+  height: 275px;
   position: relative;
-
-}
-.c_Hero img{
-  width: 100vw;
-  height: 375px;
-  
+background-image: linear-gradient(to right,#012C4A,#0269B0);
 }
 
 .c_Hero p{
@@ -2503,19 +2502,24 @@ color: white;
 
 .c_main {
   background-image: linear-gradient(to right ,#C0CAD1,#D7DADB,#E7F1F3);
+  /* background: #4CAF50; */
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
   justify-content: center;
   padding:20px 150px;
+  /* width: 1000px; */
+  margin: auto;
+  /* box-shadow:0 1px 0 1px  #E7F1F3,#C0CAD1; */
+
 }
 .c_heading{
   display: flex;
   flex-direction: row;
-gap: 3px;
+gap: 1px;
   font-weight: bold;
-font-size: 40px;
+font-size: 42px;
 font-family: poppins;
 }
 .c_heading :nth-child(1){
@@ -2530,7 +2534,8 @@ color: #012C4A;
 .para1{
   color: #4B5563;
   font-size: 16px;
-  font-family: sans-serif;
+  font-family: poppins;
+
 }
 
 .c_button{
@@ -2681,13 +2686,13 @@ background: #28597B;
 
 
 .c_form {
-
-  background: transparent;
-  
-  flex-direction: column;
+background: transparent;
   align-items: center;
   gap: 20px;
   width: 100%;
+  padding: 0 100px;
+  box-sizing: border-box;
+ 
 
 }
 
@@ -2724,6 +2729,14 @@ form {
   font-family: poppins;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   outline: none;
+  cursor:auto;
+}
+
+
+.select4{
+  cursor: pointer;
+  color: #757575;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .textarea4 {
@@ -2749,6 +2762,219 @@ form {
   background-color: #0d4566;
 }
 
+@media screen and (max-width: 768px){
+
+
+
+.c_Hero {
+  width: 100vw;
+  height: 125px;
+position: relative;
+
+background-image: linear-gradient(to right,#012C4A,#0269B0);
+}
+
+.c_Hero p{
+ position: absolute;
+ top: 40%;
+ left: 35%;
+text-align: center;
+  font-size: 20px;
+
+
+}
+
+
+.c_main {
+  background-image: linear-gradient(to right ,#C0CAD1,#D7DADB,#E7F1F3);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+  padding:10px 20px;
+
+  margin: auto;
+}
+
+
+.c_heading{
+  display: flex;
+  flex-direction: row;
+gap: 1px;
+  font-weight: bold;
+font-size: 14px;
+font-family: poppins;
+}
+
+
+
+.para1{
+  font-size: 8px;
+}
+
+.c_button{
+  display: flex;
+  gap: 10px;
+
+}
+
+
+
+.contactbutton{
+  gap: 6px;
+  width: 75px;
+  height: 50px;
+  
+}
+
+
+.contactbutton i{
+  font-size: 12px;
+}
+
+
+
+
+.contactbutton p{
+  font-size: 8px;
+}
+
+
+
+
+
+
+
+
+
+
+.c_card{
+
+  flex-direction: row;
+  gap:10px;
+
+}
+
+.c_card img{
+  width: 160px;
+  height: 220px;
+}
+
+
+.map{
+  width: 160px;
+  height: 220px;
+ 
+}
+
+.information{
+width: 160px;
+  height: 220px;
+  gap: 15px;
+   border-radius: 10px;
+ padding: 10px;
+ 
+}
+
+
+
+
+.information p:nth-child(1){
+  font-size: 16px;
+
+}
+
+
+
+.i{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.i i{
+  font-size: 20px;
+}
+
+.i1 p:nth-child(1){
+  font-size: 12px;
+
+}
+
+.i1 p:nth-child(2){
+  font-size: 8px;
+  color: #6B7280;
+  font-family: poppins;
+}
+
+
+.ii1{
+  margin-right: 25px;
+}
+
+.faq1{
+  width: 100vw;
+  height: 50px;
+padding: 10px 20px;
+}
+.faq1 p{
+  font-size: 8px;
+
+  font-family: poppins;
+  color: white;
+
+}
+.faq1 a{
+  color: #4CAF50;
+  cursor: pointer;
+}
+
+
+.c_form {
+    padding: 0 20px;
+    flex-direction: column;
+  }
+
+  .form-row {
+    width: 300px;
+    flex-direction: column;
+    height: auto;
+  }
+
+  .input4,
+  .select4,
+  .textarea4 {
+    width: 100%;
+  }
+
+  .c_form p {
+    font-size: 15px;
+    text-align: center;
+  }
+
+  .button4 {
+    width: 100%;
+    text-align: center;
+  }
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
 
 
     </style>
@@ -2757,12 +2983,12 @@ form {
 
     <!-- hero section -->
     <nav class="navbar">
-        <div class="logo1">
-        <img class="logo" src="./assets/logo.png" alt="logo" >
-         <a  href="#"></a>
+        <div class="logo1" >
+      <a onclick="showSection('home')" ><img class="logo" src="./assets/logo.png" alt="logo" style="cursor: pointer;"> </a>
+         
 </div>
         <span class="nav-item" >
-          <h6><a onclick="showSection('home')">Home</a></h6>
+          <h6><a onclick="showSection('home')" style="cursor: pointer;">HOME</a></h6>
         
         <div class="dropdown">
           <a href="#">SERVICES <i class="fas fa-chevron-down"></i></a>
@@ -3289,9 +3515,12 @@ form {
     
 
 <div class="c_Hero">
-  <img src="./assets/Contact hero.png" alt="">
+  <!-- <img src="./assets/Contact hero.png" alt=""> -->
   <p>Contact Us</p>
 </div>
+
+
+
 
 <div class="c_main">
 <span class="c_heading">
@@ -3416,7 +3645,7 @@ form {
         <ul>
           <li>📞 +91 9694446466</li>
           <li>📞 +91 938*****44</li>
-          <li>📧 cutmyloan@gmail.com</li>
+          <li class="email4">📧 cutmyloan@gmail.com</li>
           <li>📍 Location</li>
         </ul>
       </div>
