@@ -285,7 +285,7 @@ margin-top: 90px;
 
           .box{
             /* border: 1px solid black; */
-             background: #CCCCCC;
+             background: #28597B;
              /* background-image: linear-gradient(135deg,#6B7280 , #F2F7FA ); */
              /* background: linear-gradient(to right, #d7e7f5, #eef4f8, #f5f9fc); */
 /* background: linear-gradient(to right, #d1e2f0, #e2eef5, #f1f8fc); */
@@ -301,6 +301,9 @@ margin-top: 90px;
             
           }
 
+
+
+
           .box:hover{
             transform: scale(1.1);
             transition:300ms all ease-in-out ;
@@ -309,7 +312,7 @@ margin-top: 90px;
             font-size: 22px;
             font-weight: bold;
             font-family: poppins;
-            color: #012C4A;
+            color: white;
             opacity: 100%;
 
 }
@@ -794,6 +797,10 @@ height: 242px;
   
 }
 
+.box{
+  border-radius: 5px;
+}
+
 .box h2 {
   font-size: 15px;
 }
@@ -1272,9 +1279,11 @@ input:checked + .slider3:before {
   flex-direction: column;
   justify-content: center;
   padding-left: 10px;
+
 }
 
 .leftSide h4{
+
   color: #012C4A;
   font-size: 14px;
   font-weight: bold;
@@ -1284,7 +1293,7 @@ input:checked + .slider3:before {
 .rightSide{
   width: 194px;
   height: 78px;
-  background: #81B29A;
+  background: #4E7591;
   display: flex;
   /* justify-content: center; */
 align-items: center;
@@ -1304,7 +1313,7 @@ border-radius: 0 15px 15px 0;
 
 }
 .align p{
-  color: #4CAF50;
+  color: #4B5563;
   font-size: 14px;
   font-family: poppins;
   font-weight: bold;
@@ -1337,14 +1346,25 @@ border-radius: 0 15px 15px 0;
 }
 
 .updatButton{
-  border-radius: 5px;
-  /* border:2px solid #012C4A; */
+  /* border-radius: 5px;
+  
   border: none;
   box-shadow: 0px 1.4px 0px 1.4px #647f9283;
   margin-left: 100px;
   width: 100px;
   height: 30px;
-  background: #CCCCCC;
+  background: #CCCCCC; */
+  padding: 12px 24px;
+  background-color: #11557c;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  width: fit-content;
+  transition: background-color 0.3s ease;
 }
 
 .updatButton:hover{
@@ -1529,7 +1549,7 @@ margin-right: 20px;
 
 .graph{
   width: 90%;
-  height: 55%;
+  height: 62%;
   margin-top:10px ;
 margin-left: 20px;
 margin-right: 20px;
@@ -1540,7 +1560,7 @@ margin-right: 20px;
   justify-content: center;
   padding: 15px;
   border-radius: 10px;
-  gap: 4px;
+  gap: 6px;
   /* padding-bottom: 300px; */
 
 }
@@ -1558,7 +1578,7 @@ margin-right: 20px;
 .bars {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center; 
   gap: 100px; 
   margin: 20px auto; 
@@ -3287,29 +3307,29 @@ gap: 10px;
 
 .a_1st{
   display: flex;
-  flex-direction: column;
-  gap: 2px;
-  max-width: 200px;
-  padding: 5px;  
+  flex-direction: row;
+  gap: 20px;
+  max-width: 400px;
+  padding: 10px;  
   margin: 0 auto;  
   max-height: 200px; 
 border-radius: 10px;
-padding-bottom: 10px;
+/* padding-bottom: 10px; */
    
 }
 
 
 .a_1st img{
-max-width: 85%;
+max-width: 60%;
   height: 90%;
-  margin-top: 10px; 
+/* border-radius: 10px; */
 
 }
 
 
 
 .a_1st h1{
-  font-size: 15px;
+  font-size: 16px;
   color: white;
   font-weight: bold;
 font-family: poppins,sans-serif;
@@ -3329,7 +3349,7 @@ text-align: center;
 
 
 .a_2nd{
-   display: flex;
+   /* display: flex;
   flex-direction: column;
   gap: 2px;
   max-width: 200px;
@@ -3338,18 +3358,26 @@ text-align: center;
   max-height: 200px; 
 border-radius: 10px;
 padding-bottom: 10px;
-   
+    */
+    display: flex;
+  flex-direction: row;
+  gap: 20px;
+  max-width: 400px;
+  padding: 10px;  
+  margin: 0 auto;  
+  max-height: 200px; 
+border-radius: 10px;
 }
 
 .a_2nd img{
-max-width: 85%;
+max-width: 60%;
   height: 90%;
-  margin-top: 10px; 
+  /* margin-top: 10px;  */
 
 
 }
 .a_2nd h1{
-  font-size: 15px;
+  font-size: 16px;
   color: white;
   font-weight: bold;
 font-family: poppins,sans-serif;
@@ -3360,27 +3388,25 @@ text-align: center;
 }
 
 .a_3rd{
-   display: flex;
-  flex-direction: column;
-  gap: 2px;
-  max-width: 200px;
-  padding: 5px;  
+ display: flex;
+  flex-direction: row;
+  gap: 20px;
+  max-width: 400px;
+  padding: 10px;  
   margin: 0 auto;  
   max-height: 200px; 
 border-radius: 10px;
-padding-bottom: 10px;
-   
 }
 
 .a_3rd img{
-max-width: 85%;
+max-width: 60%;
   height: 90%;
   margin-top: 10px; 
 
 
 }
 .a_3rd h1{
-  font-size: 15px;
+  font-size: 16px;
   color: white;
   font-weight: bold;
 font-family: poppins,sans-serif;
@@ -3675,12 +3701,12 @@ Need Help? Call Us at 1800-XXX-XXXX&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&n
   
   <p>
     ₹
-    <input  type="number" id="loanInput" min="50000" max="10000000" step="1" value="100000">
+    <input  type="number" id="loanInput" min="1000000" max="10000000" step="10" value="1000000">
   </p>
 </div>
 
 <!--slider-->
-<input type="range" min="50000" max="10000000"  class="slider" step="1" loanAmount-slider>
+<input type="range" min="1000000" max="10000000"  class="slider" step="10" loanAmount-slider>
 
 </div>
 
@@ -3691,12 +3717,12 @@ Need Help? Call Us at 1800-XXX-XXXX&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&n
     
     <p>
       ₹
-      <input  type="number" id="creditInput" min="1000000" max="10000000" step="1" value="100000">
+      <input  type="number" id="creditInput" min="1000000" max="10000000" step="10" value="1000000">
       </p>
   </div>
   
   <!--slider-->
-  <input type="range" min="100000" max="10000000"  class="slider" step="1" creditDebt-slider>
+  <input type="range" min="1000000" max="10000000"  class="slider" step="10" creditDebt-slider>
   
   </div>
 
@@ -3705,14 +3731,14 @@ Need Help? Call Us at 1800-XXX-XXXX&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&n
 <p>Have you missed any Loan EMI/Payment in the last 3 months?</p>
 
 <div class="togglebutton1">
-<label class="switch">
+<label class="switch" >
   <input type="checkbox" id="emiToggle">
   <span class="slider3"></span>
 </label>
 <span id="toggleText">No</span>
 
 
-<button class="updatButton" onclick="updateBar()">Update</button>
+<button class="updatButton">Get Resolution</button>
 </div>
 </div>
 
@@ -3727,15 +3753,22 @@ Need Help? Call Us at 1800-XXX-XXXX&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&n
   <h1>Settlement Outcome</h1>
   <div class="bars">
     <div class="barFirst">
-      <div id="bar" style="width: 100px; min-height: 50px; max-height: 200px; background: #4CAF50; ">
-        <p id="valueBar1"></p>
+      <div id="bar" style="width: 100px; min-height: 25px; max-height: 200px;background: linear-gradient(to right, #012C4A, #0269B0);
+border-radius: 8px;
+transition: height 0.4s ease; 
+
+">
+        <p id="valueBar1" style="margin-bottom:10px ;"></p>
       </div>
       <p>Without Cut My Loan</p>
     </div>
 
     <div class="barSecond">
-      <div id="bar1" style="width: 100px; min-height: 50px; max-height: 200px; background: #4CAF50; ">
-        <p id="valueBar2"></p>
+      <div id="bar1" style="width: 100px; min-height: 25px; max-height: 200px; background: linear-gradient(to right, #012C4A, #0269B0);
+border-radius: 8px;
+transition: height 0.4s ease; ">
+
+        <p id="valueBar2"  style="margin-bottom:10px ;"></p>
       </div>
       <p>With Cut My Loan</p>
     </div>
