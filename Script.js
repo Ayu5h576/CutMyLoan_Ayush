@@ -11,11 +11,6 @@ const creditSlider = document.querySelector("[creditDebt-slider]");
 let amountLength = 100000;
 let creditLength = 100000;
 
-function showSection(sectionId) {
-  const sections = document.querySelectorAll(".section");
-  sections.forEach((section) => section.classList.remove("active"));
-  document.getElementById(sectionId).classList.add("active");
-}
 
 
 function handleSlider() {
@@ -37,6 +32,7 @@ loanSlider.addEventListener("input", (e) => {
   loanInput.value = loanSlider.value;
 
   handleSlider();
+  updateBar();
 });
 
 loanInput.addEventListener("input", () => {
@@ -48,12 +44,14 @@ loanInput.addEventListener("input", () => {
   if (val > max) val = max;
 
   loanSlider.value = val;
+  updateBar();
 });
 
 creditSlider.addEventListener("input", (e) => {
   creditLength = e.target.value;
   creditInput.value = creditSlider.value;
   handleSlider();
+  updateBar();
 });
 
 creditInput.addEventListener("input", () => {
@@ -65,6 +63,7 @@ creditInput.addEventListener("input", () => {
   if (val > max) val = max;
 
   creditSlider.value = val;
+  updateBar();
 });
 
 const toggle = document.getElementById("emiToggle");
@@ -72,23 +71,47 @@ const toggleText = document.getElementById("toggleText");
 // const value1=document.querySelector("[value1]")
 toggle.addEventListener("change", () => {
   toggleText.textContent = toggle.checked ? "YES" : "NO";
+  updateBar(); 
 });
 
-function updateBar() {
-  const loan = parseInt(loanInput.value) || 0;
-  const credit = parseInt(creditInput.value) || 0;
-  const total = loan + credit;
-  valueBar1.innerText = total;
-  valueBar2.innerText = (total * 0.7).toFixed(2);
-  valueBar3.innerText = total;
-  valueBar4.innerText = (total * 0.7).toFixed(2);
 
-  valueBar5.innerText = (total - total * 0.7).toFixed(2);
-  const bHeight = (document.getElementById("bar").style.height =
-    total / 120000 + "px");
-  const b1Height = (document.getElementById("bar1").style.height =
-    (total * 0.7) / 120000 + "px");
-}
+  function updateBar() {
+    const loan = parseInt(loanInput.value) || 0;
+    const credit = parseInt(creditInput.value) || 0;
+    const total = loan + credit;
+    
+    if (toggle.checked) {
+    valueBar1.innerText = "₹  " + total;
+    valueBar2.innerText = "₹ "+(total * 0.7).toFixed(2);
+    valueBar3.innerText = "₹ "+total;
+    valueBar4.innerText = "₹ "+(total * 0.7).toFixed(2);
+
+    valueBar5.innerText = "₹ "+(total - total * 0.7).toFixed(2);
+    const bHeight = (document.getElementById("bar").style.height =
+      total / 100000 + "px");
+    const b1Height = (document.getElementById("bar1").style.height =
+      (total * 0.7) / 100000 + "px");
+    }
+    else{
+      valueBar1.innerText = "₹  " + total;
+      valueBar2.innerText = "₹  " + (total * 0.65).toFixed(2);
+      valueBar3.innerText = "₹  " + total;
+      valueBar4.innerText = "₹  " + (total * 0.65).toFixed(2);
+
+      valueBar5.innerText = "₹  " + (total - total * 0.65).toFixed(2);
+const bHeight = (document.getElementById("bar").style.height =
+  total / 100000 + "px");
+const b1Height = (document.getElementById("bar1").style.height =
+  (total * 0.65) / 100000 + "px");
+    }
+  }
+
+  function showSection(sectionId) {
+    const sections = document.querySelectorAll(".section");
+    sections.forEach((section) => section.classList.remove("active"));
+    document.getElementById(sectionId).classList.add("active");
+  }
+
 
 const faqItems = document.querySelectorAll(".faq_item");
 
