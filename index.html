@@ -272,6 +272,7 @@ margin-top: 90px;
 
 
           .stats-section{
+           
             width: 662px;
             height: 297px;
             display: grid;
@@ -279,16 +280,24 @@ margin-top: 90px;
             grid-template-rows: 110px 110px;
             gap: 30px;
             margin-top: 140px;
+           
           }
 
           .box{
             /* border: 1px solid black; */
+             background: #CCCCCC;
+             /* background-image: linear-gradient(135deg,#6B7280 , #F2F7FA ); */
+             /* background: linear-gradient(to right, #d7e7f5, #eef4f8, #f5f9fc); */
+/* background: linear-gradient(to right, #d1e2f0, #e2eef5, #f1f8fc); */
+/* background: linear-gradient(to right, #e6f0fa, #dceef6, #cfe7f3); */
+
+             
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             border-radius: 15px;
-            box-shadow: 0px 1.4px 0px 1.4px #647f9283;
+        
             
           }
 
@@ -627,6 +636,7 @@ animation: ani3 10s infinite ease-out forwards;
 }
 }
 
+
 /* media querry */
 @media screen and (max-width: 768px) {
 
@@ -822,22 +832,8 @@ height: 242px;
 }
 
 
-.strip{
-  width: 100vw;
-  height: 58px;
-  background: #012C4A;
-  display: flex;
-  flex-direction: row;
-  gap: 30px;
-  justify-content: center;
-  align-items: center;
-}
 
-.strip h5{
-  color: white;
-  font-size: 15px;
-font-family: poppins;
-}
+
 
 
 .advice{
@@ -1875,8 +1871,8 @@ font-family: poppins;
 
 
 .testimonials{
-   /* background-image: linear-gradient(to right ,#C0CAD1,#D7DADB,#E7F1F3); */
-   background: white;
+    background-image: linear-gradient(to right ,#C0CAD1,#D7DADB,#E7F1F3); 
+   /* background: white; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1905,7 +1901,8 @@ font-family: poppins;
 
 .clients{
   /* background: white ; */
-background-image: linear-gradient(to right ,#C0CAD1,#D7DADB,#E7F1F3);
+/* background-image: linear-gradient(to right ,#C0CAD1,#D7DADB,#E7F1F3); */
+/* opacity: 50%; */
   margin-top: 20px;
   width: 1230px;
   height: 450px;
@@ -2432,6 +2429,7 @@ font-family: poppins;
   .footer-container {
     flex-direction: column;
     gap: 10px;
+    
   }
 
   .footer-left {
@@ -2460,6 +2458,15 @@ font-family: poppins;
 
   }
 
+  .footer-logo {
+  width: 150px;
+  height: 70px;
+   margin-left: 25%;
+  
+  margin-bottom: 10px;
+}
+
+
   .footer-bottom {
     text-align: center;
     font-size: 12px;
@@ -2484,14 +2491,15 @@ font-family: poppins;
 .c_Hero {
   width: 100vw;
   height: 275px;
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 background-image: linear-gradient(to right,#012C4A,#0269B0);
 }
 
 .c_Hero p{
-  position: absolute;
-  top: 40%;
-  left: 40%;
+
   font-size: 58px;
 font-weight: bold;
 font-family: poppins;
@@ -2769,16 +2777,14 @@ form {
 .c_Hero {
   width: 100vw;
   height: 125px;
-position: relative;
+display: flex;
+justify-content: center;
+align-items: center;
 
 background-image: linear-gradient(to right,#012C4A,#0269B0);
 }
 
 .c_Hero p{
- position: absolute;
- top: 40%;
- left: 35%;
-text-align: center;
   font-size: 20px;
 
 
@@ -2973,6 +2979,439 @@ padding: 10px 20px;
 
 
 
+.a_hero {
+  position: relative;
+  width: 100%;
+  max-height: 224px; 
+  overflow: hidden;
+}
+
+.a_hero img {
+  width: 100%;
+  height: auto;
+
+}
+
+.a_hero p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  text-align: center;
+
+   font-size: 48px;
+  font-family: poppins,sans-serif;
+  font-weight: bold;
+  color: white;
+ 
+ 
+}
+
+
+
+
+#aboutUs{
+   background-image: linear-gradient(to right ,#C0CAD1,#D7DADB,#E7F1F3);
+}
+
+
+.a_first{
+  width: 100vw;
+  display: flex;
+  padding: 20px 150px;
+  margin: auto;
+ gap: 80px;
+ align-items: center;
+ justify-content: space-between;
+  box-sizing: border-box;
+  /* flex-wrap: wrap; */
+
+
+}
+
+
+.a_points_list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 16px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.a_points_list li:hover{
+  transform: scale(1.05);
+  transition: all 300ms ease-in-out;
+}
+
+.a_points_list li {
+  background: white;
+
+  border-radius: 12px;
+  padding: 15px 20px;
+  font-size: 18px;
+  color: #2A2A2A;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.a_points_list li span {
+  margin-right: 12px;
+  font-size: 22px;
+}
+
+.a_1st{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  /* background: #012C4A; */
+  max-width: 400px;
+  width: 100%;
+  /* border-radius: 20px; */
+  padding: 30px 20px;  
+  margin: 0 auto;  
+  max-height: 400px; 
+  box-sizing: border-box;
+   background: rgba(10, 55, 95, 0.8);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 24px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+
+.a_1st img{
+max-width: 85%;
+  height: 90%;
+  margin-top: 10px; 
+
+}
+
+
+
+.a_1st h1{
+  color: white;
+  font-weight: bold;
+font-family: poppins,sans-serif;
+text-align: center;
+}
+
+/* .a_strip{
+  width: 100vw;
+  height: 60px;
+  background: #012C4A;
+
+} */
+.a_2nd{
+   display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  /* background: #012C4A; */
+  max-width: 400px;
+  width: 100%;
+  /* border-radius: 20px; */
+  padding: 30px 20px;  
+  margin: 0 auto;  
+  max-height: 400px; 
+  box-sizing: border-box;
+     background: rgba(10, 55, 95, 0.8);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 24px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.a_2nd img{
+max-width: 85%;
+  height: 90%;
+  margin-top: 10px; 
+
+}
+.a_2nd h1{
+  color: white;
+  font-weight: bold;
+font-family: poppins,sans-serif;
+text-align: center;
+}
+
+.a_3rd{
+   display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  /* background: #012C4A; */
+  max-width: 400px;
+  width: 100%;
+  border-radius: 20px;
+  padding: 30px 20px;  
+  margin: 0 auto;  
+max-height: 400px; 
+  box-sizing: border-box;
+     background: rgba(10, 55, 95, 0.8);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 24px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.a_3rd img{
+max-width: 85%;
+  height: 90%;
+  margin-top: 10px; 
+
+}
+
+.a_3rd h1{
+  color: white;
+  font-weight: bold;
+font-family: poppins,sans-serif;
+text-align: center;
+}
+.a_strip {
+  width: 100vw;
+  height: 60px;
+  background: #012C4A;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+
+}
+
+.marquee {
+  white-space: nowrap;
+  display: inline-block;
+  animation: scroll-left 10s linear infinite;
+ 
+}
+
+.marquee p {
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  font-family: poppins, sans-serif;
+  padding-left: 100vw; 
+}
+
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.marquee:hover {
+  animation-play-state: paused;
+  
+}
+
+.extra{
+  display: none;
+}
+
+
+@media screen and (max-width: 768px){
+  .a_hero {
+ 
+  width: 100%;
+  max-height: 324px; 
+
+}
+
+.a_hero img {
+  width: 100%;
+  height: 100%;
+
+}
+
+.a_hero p {
+   font-size: 28px;
+
+}
+
+
+
+
+
+.a_first{
+  width: 100vw;
+ 
+  display: flex;
+ flex-direction: column;
+  padding: 10px 20px;
+  margin: auto;
+ gap: 10px;
+
+
+
+
+}
+
+
+
+
+
+.a_points_list {
+ 
+  gap: 10px;
+  max-width: 375px;
+  width: 100%;
+  margin: auto;
+}
+
+
+.a_points_list li {
+
+gap: 10px;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 12px;
+ 
+}
+
+.a_points_list li span {
+  margin-right: 2px;
+  font-size: 15px;
+}
+
+.a_1st{
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  max-width: 200px;
+  padding: 5px;  
+  margin: 0 auto;  
+  max-height: 200px; 
+border-radius: 10px;
+padding-bottom: 10px;
+   
+}
+
+
+.a_1st img{
+max-width: 85%;
+  height: 90%;
+  margin-top: 10px; 
+
+}
+
+
+
+.a_1st h1{
+  font-size: 15px;
+  color: white;
+  font-weight: bold;
+font-family: poppins,sans-serif;
+text-align: center;
+}
+
+.extra{
+  display: block;
+}
+.extra1{
+  display: none;
+}
+
+
+
+
+
+
+.a_2nd{
+   display: flex;
+  flex-direction: column;
+  gap: 2px;
+  max-width: 200px;
+  padding: 5px;  
+  margin: 0 auto;  
+  max-height: 200px; 
+border-radius: 10px;
+padding-bottom: 10px;
+   
+}
+
+.a_2nd img{
+max-width: 85%;
+  height: 90%;
+  margin-top: 10px; 
+
+
+}
+.a_2nd h1{
+  font-size: 15px;
+  color: white;
+  font-weight: bold;
+font-family: poppins,sans-serif;
+text-align: center;
+}
+.extra1{
+  display: none;
+}
+
+.a_3rd{
+   display: flex;
+  flex-direction: column;
+  gap: 2px;
+  max-width: 200px;
+  padding: 5px;  
+  margin: 0 auto;  
+  max-height: 200px; 
+border-radius: 10px;
+padding-bottom: 10px;
+   
+}
+
+.a_3rd img{
+max-width: 85%;
+  height: 90%;
+  margin-top: 10px; 
+
+
+}
+.a_3rd h1{
+  font-size: 15px;
+  color: white;
+  font-weight: bold;
+font-family: poppins,sans-serif;
+text-align: center;
+}
+
+
+.a_strip {
+  width: 100vw;
+  height: 40px;
+  
+
+}
+
+
+
+.marquee p {
+ 
+  font-size: 12px;
+ 
+}
+}
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3011,7 +3450,7 @@ padding: 10px 20px;
         <div class="dropdown">
           <a href="#">ABOUT <i class="fas fa-chevron-down"></i></a>
           <div class="dropdown-content">
-            <a href="#">About Us</a>
+            <a onclick="showSection('aboutUs')">About Us</a>
             <a href="#">Privacy Policy</a>
           
           </div>
@@ -3119,7 +3558,9 @@ padding: 10px 20px;
           </span>
             <h2>Happy Client</h2>
         </div>
+
        
+
         <div class="box " id="box2" > 
             
           <span id="stats"><h3>23,000+ </h3>
@@ -3127,13 +3568,18 @@ padding: 10px 20px;
           </span>
             <h2>Loan Resolved</h2>
         </div>
+
         
+
         <div class="box" id="box3">
             <span id="stats"><h3>100+ </h3>
             <!-- <img src="./assets/member.png" alt="members"> -->
             </span>
             <h2>Team Members</h2>
         </div>
+
+         
+
         <div class="box" id="box4">
             <span id="stats"><h3>15+</h3>
             <!-- <img src="./assets/states.png" alt="flag"> -->
@@ -3141,6 +3587,8 @@ padding: 10px 20px;
             <h2>States Served</h2>
         </div>
         
+
+
       </section>
 
 
@@ -3176,13 +3624,13 @@ padding: 10px 20px;
 
 
     <!-- strip -->
-    <div class="strip">
-<h5>Need Help? Call Us at 1800-XXX-XXXX           </h5>
-<h5>|</h5>
-<h5>Chat with an Expert         </h5>
-<h5>|</h5>
-<h5> Available 9 AM – 7 PM All Days</h5>
-    </div>
+    <div class="a_strip">
+      <div class="marquee">
+        <p>
+Need Help? Call Us at 1800-XXX-XXXX&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Chat with an Expert&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Available 9 AM – 7 PM All Days
+</p>
+   </div>
+   </div>
 
 
     <div class="advice">
@@ -3617,6 +4065,84 @@ padding: 10px 20px;
   </div>
 
 
+<div id="aboutUs" class="section">
+<div class="a_hero">
+  <img  src="./assets/a_hero.png" alt="">
+<p>About Us</p>
+</div>
+
+<div class="a_first">
+  <div class="a_1st">
+    <h1>Who We Are</h1>
+    <img src="./assets/whoweare.png" alt="aboutusimage">
+     
+ 
+    </div>
+    <ul class="a_points_list">
+    <li><span>✅</span> Debt settlement platform helping individuals resolve unsecured loans.</li>
+    <li><span>🔗</span> We work directly with banks and NBFCs to reduce outstanding amounts.</li>
+    <li><span>❌</span> Penalty waivers and interest reductions offered based on eligibility.</li>
+    <li><span>⚖️</span> Legal, customized solutions for every client’s unique situation.</li>
+    <li><span>🎯</span> Our mission is to empower people towards a debt-free future.</li>
+  </ul>
+</div>
+
+<div class="a_strip">
+   <div class="marquee">
+    <p>
+      🎯 10,000+ Loans Settled&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;💬 Rated 4.9/5 by Clients&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📍 Serving Pan India &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 🚀 Fastest Approval Process
+    </p>
+  </div>
+</div>
+
+<div class="a_first">
+  <div class="a_2nd extra">
+    <h1>What Makes Us Different</h1>
+    <img src="./assets/whatmakedifference.png" alt="aboutusimage">
+  </div>
+<ul class="a_points_list">
+    <li><span>💡</span> More than just debt settlement — we offer complete financial guidance.</li>
+    <li><span>🧭</span> Personalized and ethical process tailored to your situation.</li>
+    <li><span>🤝</span> Our expert team negotiates directly with your lenders.</li>
+    <li><span>🛡️</span> Full support at every step of your journey.</li>
+    <li><span>🌟</span> Our mission: a stress-free, debt-free future for you.</li>
+  </ul>
+  <div class="a_2nd extra1">
+    <h1>What Makes Us Different</h1>
+    <img src="./assets/whatmakedifference.png" alt="aboutusimage">
+  </div>
+</div>
+
+<div class="a_strip">
+<div class="marquee">
+    <p>
+✅ Zero Upfront Charges&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🛡️ 100% Confidential Services&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📞 Free Consultation Available
+    </p>
+  </div>
+</div>
+<div class="a_first">
+  <div class="a_3rd">
+    <h1>Our Mission</h1>
+    <img src="./assets/ourmissin.png" alt="aboutusimage">
+  </div>
+<ul class="a_points_list">
+    <li><span>🎯</span> Helping individuals and families overcome unsecured debt with confidence.</li>
+    <li><span>🤝</span> Offering trustworthy, personalized solutions to reduce stress and simplify repayments.</li>
+    <li><span>⚖️</span> Practicing ethical methods and expert negotiation to put your needs first.</li>
+    <li><span>💼</span> Empowering you to regain control of your finances and your future.</li>
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+</div>
+
+
 
 <footer class="footer">
   <div class="footer-container">
@@ -3645,7 +4171,7 @@ padding: 10px 20px;
         <ul>
           <li>📞 +91 9694446466</li>
           <li>📞 +91 938*****44</li>
-          <li class="email4">📧 cutmyloan@gmail.com</li>
+          <li>📧 cutmyloan@gmail.com</li>
           <li>📍 Location</li>
         </ul>
       </div>
