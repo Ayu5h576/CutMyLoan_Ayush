@@ -1,3 +1,8 @@
+
+
+
+
+
 const valueBar1 = document.getElementById("valueBar1");
 const valueBar2 = document.getElementById("valueBar2");
 const valueBar3 = document.getElementById("valueBar3");
@@ -10,8 +15,6 @@ const creditSlider = document.querySelector("[creditDebt-slider]");
 
 let amountLength = 100000;
 let creditLength = 100000;
-
-
 
 function handleSlider() {
   loanSlider.value = amountLength;
@@ -71,47 +74,44 @@ const toggleText = document.getElementById("toggleText");
 // const value1=document.querySelector("[value1]")
 toggle.addEventListener("change", () => {
   toggleText.textContent = toggle.checked ? "YES" : "NO";
-  updateBar(); 
+  updateBar();
 });
 
+function updateBar() {
+  const loan = parseInt(loanInput.value) || 0;
+  const credit = parseInt(creditInput.value) || 0;
+  const total = loan + credit;
 
-  function updateBar() {
-    const loan = parseInt(loanInput.value) || 0;
-    const credit = parseInt(creditInput.value) || 0;
-    const total = loan + credit;
-    
-    if (toggle.checked) {
+  if (toggle.checked) {
     valueBar1.innerText = "₹  " + total;
-    valueBar2.innerText = "₹ "+(total * 0.7).toFixed(2);
-    valueBar3.innerText = "₹ "+total;
-    valueBar4.innerText = "₹ "+(total * 0.7).toFixed(2);
+    valueBar2.innerText = "₹ " + (total * 0.7).toFixed(2);
+    valueBar3.innerText = "₹ " + total;
+    valueBar4.innerText = "₹ " + (total * 0.7).toFixed(2);
 
-    valueBar5.innerText = "₹ "+(total - total * 0.7).toFixed(2);
+    valueBar5.innerText = "₹ " + (total - total * 0.7).toFixed(2);
     const bHeight = (document.getElementById("bar").style.height =
       total / 100000 + "px");
     const b1Height = (document.getElementById("bar1").style.height =
       (total * 0.7) / 100000 + "px");
-    }
-    else{
-      valueBar1.innerText = "₹  " + total;
-      valueBar2.innerText = "₹  " + (total * 0.65).toFixed(2);
-      valueBar3.innerText = "₹  " + total;
-      valueBar4.innerText = "₹  " + (total * 0.65).toFixed(2);
+  } else {
+    valueBar1.innerText = "₹  " + total;
+    valueBar2.innerText = "₹  " + (total * 0.65).toFixed(2);
+    valueBar3.innerText = "₹  " + total;
+    valueBar4.innerText = "₹  " + (total * 0.65).toFixed(2);
 
-      valueBar5.innerText = "₹  " + (total - total * 0.65).toFixed(2);
-const bHeight = (document.getElementById("bar").style.height =
-  total / 100000 + "px");
-const b1Height = (document.getElementById("bar1").style.height =
-  (total * 0.65) / 100000 + "px");
-    }
+    valueBar5.innerText = "₹  " + (total - total * 0.65).toFixed(2);
+    const bHeight = (document.getElementById("bar").style.height =
+      total / 100000 + "px");
+    const b1Height = (document.getElementById("bar1").style.height =
+      (total * 0.65) / 100000 + "px");
   }
+}
 
-  function showSection(sectionId) {
-    const sections = document.querySelectorAll(".section");
-    sections.forEach((section) => section.classList.remove("active"));
-    document.getElementById(sectionId).classList.add("active");
-  }
-
+function showSection(sectionId) {
+  const sections = document.querySelectorAll(".section");
+  sections.forEach((section) => section.classList.remove("active"));
+  document.getElementById(sectionId).classList.add("active");
+}
 
 const faqItems = document.querySelectorAll(".faq_item");
 
@@ -136,6 +136,39 @@ faqItems.forEach((item) => {
       btn.textContent = "+";
     }
   });
+});
+
+
+const popupForm = document.getElementById("popup-form");
+
+popupForm.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const name = popupForm.querySelector("input[name='name']").value.trim();
+  const phone = popupForm.querySelector("input[name='phone']").value.trim();
+  const email = popupForm.querySelector("input[name='email']").value.trim();
+
+  if (!name || !phone || !email) {
+    alert("Please fill in all fields.");
+    return;
+  }
+
+  db.collection("formSubmissions")
+    .add({
+      name: name,
+      phone: phone,
+      email: email,
+      timestamp: new Date(),
+    })
+    .then(() => {
+      
+      closeModal(); 
+      popupForm.reset();
+    })
+    .catch((error) => {
+      console.error("Error writing document: ", error);
+      alert("Something went wrong.");
+    });
 });
 
 
@@ -165,3 +198,27 @@ button2.addEventListener("click", () => {
   button2.classList.add("active3");
   button1.classList.remove("active3");
 });
+
+const form1 = document.getElementById("form1");
+const home1 = document.getElementById("home");
+const overlay = document.querySelector(".overlay");
+
+const wrapper = document.getElementById("wrapper");
+window.onload = () => {
+  setTimeout(() => {
+    form1.style.display = "flex";
+    overlay.classList.add("overlayActive");
+    // home1.classList.add("blurred");
+
+    wrapper.style.overflow = "hidden";
+    wrapper.classList.add("blurred");
+  }, 5000);
+};
+
+const closeModal = () => {
+  form1.style.display = "none";
+  overlay.classList.remove("overlayActive");
+  // home1.classList.remove("blurred");
+  wrapper.style.overflowY = "auto";
+  wrapper.classList.remove("blurred");
+};
