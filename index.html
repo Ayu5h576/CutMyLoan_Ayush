@@ -1898,7 +1898,7 @@ font-family: poppins;
   justify-content: center;
   align-items: center;
   padding: 30px 150px 30px 150px;
-  border-radius: 15px;
+
 
 }
 
@@ -3430,24 +3430,156 @@ text-align: center;
 }
 }
 
+.h_form{
+position: fixed;
+top: 150px;
+right: 300px;
+z-index: 10000;
+  /* display: flex;
+  flex-direction: row; */
+  width: 900px;
+  height: 500px;
+  background-image: linear-gradient(to right ,#C0CAD1,#D7DADB,#E7F1F3);
+  justify-content: space-between;
+  margin: auto;
+  padding: 30px ;
+  border-radius: 30px;
+  
+}
+.h_image{
+  height: 450px;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: #171D2D;
+  border-radius: 30px;
+  padding: 10px 15px;
+  justify-content: center;
+  /* align-items: center; */
+}
+.h_image h1{
+  font-size: 48px;
+  font-weight: bold;
+  font-family: poppins,sans-serif;
+  color: white;
+   margin-left: 15px;
+}
+
+.h_image p{
+  color: #6B7280;
+  font-size: 20px;
+  font-family: poppins;
+  margin-left: 15px;
+}
+.h_line{
+  width: 100px;
+  height: 2px;
+  background: white;
+   margin-left: 15px;
+}
+
+.h_image img{
+  width: 100%;
+  height: 250px;
+}
+.h_form1{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+
+  justify-content: center
+}
+.input5{
+  width: 420px;
+  height: 70px;
+  border-radius: 15px;
+  border: none;
+  padding-left: 20px;
+  font-size: 20px;
+  /* font-weight: bold; */
+  color: #6A6B6B;
+  cursor: auto;
+  outline: none;
+  font-family: poppins,sans-serif;
+}
+.input5:valid {
+  color: black; 
+
+}
 
 
+#button5{
+  background: #171D2D;
+}
+#button5:hover{
+  background: #012C4A;
+}
+#form1{
+  display: none;
+}
 
+.blurred {
+    filter: blur(1.5px);
+    transition: filter 0.15s ease-in-out;
+}
 
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+}
 
+.overlay.overlayactive {
+    display: block;         
+}
 
-
-
-
+.cross{
+margin-left: 380px;
+margin-bottom: 30px;
+font-size: 35px;
+/* border: none; */
+cursor: pointer;
+}
 
 
 
     </style>
-<div class="wrapper">
+    <div class="h_form" id="form1">
+  <div class="h_image">
+<h1>Welcome !</h1>
+<span class="h_line"></span>
+<p>Enter your details to explore more</p>
+<img src="./assets/h_image.jpg" alt="">
+  </div>
 
+  <div class="h_form1">
+<form id="popup-form">
+  
+      <i class="fa-solid fa-xmark cross" style="color: #171D2D;"  onclick="closeModal()"></i>
+        
+        <input class="input5" name="name" type="text" placeholder="Name *" required />
+     <input class="input5" name="phone" type="tel" placeholder="Phone No *" required />
+
+        <input class="input5" name="email" type="email" placeholder="Email *" required />
+  
+      <button class="button4" id="button5" type="submit" >Get Started</button>
+    </form>
+  </div>
+</div>
+
+
+<div class="wrapper" id="wrapper">
+
+<div class="overlay"></div>
 
     <!-- hero section -->
-    <nav class="navbar">
+    <nav class="navbar" id="nav">
         <div class="logo1" >
       <a onclick="showSection('home')" ><img class="logo" src="./assets/logo.png" alt="logo" style="cursor: pointer;"> </a>
          
@@ -3455,7 +3587,7 @@ text-align: center;
         <span class="nav-item" >
           <h6><a onclick="showSection('home')" style="cursor: pointer;">HOME</a></h6>
         
-        <div class="dropdown">
+        <div class="dropdown" >
           <a href="#">SERVICES <i class="fas fa-chevron-down"></i></a>
           <div class="dropdown-content">
             <a href="#">Option 1</a>
@@ -3590,8 +3722,9 @@ text-align: center;
         <div class="box " id="box2" > 
             
           <span id="stats"><h3>23,000+ </h3>
-          <!-- <img src="./assets/money.png" alt="money"> -->
+
           </span>
+          
             <h2>Loan Resolved</h2>
         </div>
 
@@ -3989,6 +4122,11 @@ transition: height 0.4s ease; ">
 </div>
 
 
+
+
+
+
+
 </div>
 
 
@@ -4112,18 +4250,18 @@ transition: height 0.4s ease; ">
  
     </div>
     <ul class="a_points_list">
-    <li><span>✅</span> Debt settlement platform helping individuals resolve unsecured loans.</li>
-    <li><span>🔗</span> We work directly with banks and NBFCs to reduce outstanding amounts.</li>
-    <li><span>❌</span> Penalty waivers and interest reductions offered based on eligibility.</li>
-    <li><span>⚖️</span> Legal, customized solutions for every client’s unique situation.</li>
-    <li><span>🎯</span> Our mission is to empower people towards a debt-free future.</li>
+    <li><span><i class="fa-solid fa-square-check" style="color: #043153;"></i></span> Debt settlement platform helping individuals resolve unsecured loans.</li>
+    <li><span><i class="fa-solid fa-link" style="color: #043153;"></i></span> We work directly with banks and NBFCs to reduce outstanding amounts.</li>
+    <li><span><i class="fa-solid fa-square-xmark" style="color: #043153;"></i></span> Penalty waivers and interest reductions offered based on eligibility.</li>
+    <li><span><i class="fa-solid fa-scale-balanced" style="color: #043153;"></i></span> Legal, customized solutions for every client’s unique situation.</li>
+    <li><span><i class="fa-solid fa-bullseye" style="color: #043153;"></i></span> Our mission is to empower people towards a debt-free future.</li>
   </ul>
 </div>
 
 <div class="a_strip">
    <div class="marquee">
     <p>
-      🎯 10,000+ Loans Settled&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;💬 Rated 4.9/5 by Clients&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📍 Serving Pan India &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 🚀 Fastest Approval Process
+      <i class="fa-solid fa-bullseye" style="color: white;"></i> 10,000+ Loans Settled&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-comment" style="color: white;"></i> Rated 4.9/5 by Clients&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-map-pin" style="color: white;"></i> Serving Pan India &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i class="fa-solid fa-rocket" style="color: white;"></i> Fastest Approval Process
     </p>
   </div>
 </div>
@@ -4134,11 +4272,11 @@ transition: height 0.4s ease; ">
     <img src="./assets/whatmakedifference.png" alt="aboutusimage">
   </div>
 <ul class="a_points_list">
-    <li><span>💡</span> More than just debt settlement — we offer complete financial guidance.</li>
-    <li><span>🧭</span> Personalized and ethical process tailored to your situation.</li>
-    <li><span>🤝</span> Our expert team negotiates directly with your lenders.</li>
-    <li><span>🛡️</span> Full support at every step of your journey.</li>
-    <li><span>🌟</span> Our mission: a stress-free, debt-free future for you.</li>
+    <li><span><i class="fa-solid fa-lightbulb" style="color: #043153;"></i></span> More than just debt settlement — we offer complete financial guidance.</li>
+    <li><span><i class="fa-solid fa-clock" style="color: #043153;"></i></span> Personalized and ethical process tailored to your situation.</li>
+    <li><span><i class="fa-solid fa-handshake" style="color: #043153;"></i></span> Our expert team negotiates directly with your lenders.</li>
+    <li><span><i class="fa-solid fa-user-shield" style="color: #043153;"></i></span> Full support at every step of your journey.</li>
+    <li><span><i class="fa-solid fa-certificate" style="color: #043153;"></i></span> Our mission: a stress-free, debt-free future for you.</li>
   </ul>
   <div class="a_2nd extra1">
     <h1>What Makes Us Different</h1>
@@ -4149,7 +4287,7 @@ transition: height 0.4s ease; ">
 <div class="a_strip">
 <div class="marquee">
     <p>
-✅ Zero Upfront Charges&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🛡️ 100% Confidential Services&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📞 Free Consultation Available
+<i class="fa-solid fa-square-check" style="color: white;"></i> Zero Upfront Charges&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-user-shield" style="color: white;"></i> 100% Confidential Services&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-square-phone" style="color: white;"></i> Free Consultation Available
     </p>
   </div>
 </div>
@@ -4159,10 +4297,10 @@ transition: height 0.4s ease; ">
     <img src="./assets/ourmissin.png" alt="aboutusimage">
   </div>
 <ul class="a_points_list">
-    <li><span>🎯</span> Helping individuals and families overcome unsecured debt with confidence.</li>
-    <li><span>🤝</span> Offering trustworthy, personalized solutions to reduce stress and simplify repayments.</li>
-    <li><span>⚖️</span> Practicing ethical methods and expert negotiation to put your needs first.</li>
-    <li><span>💼</span> Empowering you to regain control of your finances and your future.</li>
+    <li><span><i class="fa-solid fa-bullseye" style="color: #043153;"></i></span> Helping individuals and families overcome unsecured debt with confidence.</li>
+    <li><span><i class="fa-solid fa-handshake" style="color: #043153;"></i></span> Offering trustworthy, personalized solutions to reduce stress and simplify repayments.</li>
+    <li><span><i class="fa-solid fa-scale-balanced" style="color: #043153;"></i></span> Practicing ethical methods and expert negotiation to put your needs first.</li>
+    <li><span><i class="fa-solid fa-suitcase" style="color: #043153;"></i></span> Empowering you to regain control of your finances and your future.</li>
   </ul>
 </div>
 
@@ -4237,12 +4375,38 @@ transition: height 0.4s ease; ">
 </footer>
 
 
-
      </div>
 
 
 
+
+
+
+
+
 <script src="./Script.js"></script>
+<!-- Firebase App (required) -->
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+
+<!-- Firestore -->
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+
+<script>
+  const firebaseConfig = {
+    apiKey: "AIzaSyBrgYLsnMgrW4zZhJeKrg94909BdDw9ej4",
+    authDomain: "cutmyloan-7fc8a.firebaseapp.com",
+    projectId: "cutmyloan-7fc8a",
+    storageBucket: "cutmyloan-7fc8a.firebasestorage.app",
+    messagingSenderId: "586908878409",
+    appId: "1:586908878409:web:623d4c5ad669e38f97e198"
+  };
+
+ 
+  firebase.initializeApp(firebaseConfig);
+
+
+  const db = firebase.firestore();
+</script>
 
 
 
