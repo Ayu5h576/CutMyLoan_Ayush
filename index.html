@@ -3435,8 +3435,7 @@ position: fixed;
 top: 150px;
 right: 300px;
 z-index: 10000;
-  /* display: flex;
-  flex-direction: row; */
+
   width: 900px;
   height: 500px;
   background-image: linear-gradient(to right ,#C0CAD1,#D7DADB,#E7F1F3);
@@ -3547,12 +3546,108 @@ font-size: 35px;
 cursor: pointer;
 }
 
+.cross1{
+  display: none;
+}
+
+
+@media screen and (max-width: 768px) {
+  .h_form {
+    bottom: 30px;
+    right: 0;
+    left: 0;
+    width: 95%;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    margin: auto;
+  }
+
+  .h_image {
+    width: 100%;
+    height: 200px;
+    padding: 20px;
+    align-items: center;
+    text-align: center;
+    gap: 2px;
+  }
+
+  .cross3{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   gap: 90px;
+  }
+
+.cross1{
+  display: flex;
+
+}
+  
+
+    .h_image h1{
+      font-size: 28px;
+
+    }
+.h_line{
+  display: none;
+}
+
+    .h_image p{
+      font-size: 15px;
+    }
+
+  .h_image h1,
+  .h_image p,
+  .h_line {
+
+    margin-left: 0;
+  }
+
+  .h_line {
+    margin: 5px auto;
+  }
+
+  .h_image img {
+    height: 100px;
+    width: 50%;
+    object-fit: cover;
+  }
+
+  .h_form1 {
+    width: 100%;
+    gap: 15px;
+    margin-top: 20px;
+  }
+
+  .input5 {
+    width: 80vw;
+    height: 40px;
+    font-size: 15px;
+    border-radius: 10px;
+  }
+
+  .cross {
+   display: none;
+  }
+  
+}
+
+
+
+
+
 
 
     </style>
     <div class="h_form" id="form1">
   <div class="h_image">
+    <div class="cross3">
 <h1>Welcome !</h1>
+<i class="fa-solid fa-xmark cross1" style="color: #ffffff;"  onclick="closeModal()"></i>
+</div>
 <span class="h_line"></span>
 <p>Enter your details to explore more</p>
 <img src="./assets/h_image.jpg" alt="">
