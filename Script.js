@@ -208,12 +208,12 @@ window.onload = () => {
   setTimeout(() => {
     form1.style.display = "flex";
     overlay.classList.add("overlayActive");
-    // home1.classList.add("blurred");
+
 
     wrapper.style.overflow = "hidden";
     wrapper.classList.add("blurred");
   }, 5000);
-};
+}
 
 const closeModal = () => {
   form1.style.display = "none";
@@ -222,3 +222,132 @@ const closeModal = () => {
   wrapper.style.overflowY = "auto";
   wrapper.classList.remove("blurred");
 };
+
+
+const clientNo = document.getElementById("clientNo");
+const client = 15000;
+
+const loanNo = document.getElementById("loanNo");
+const loan = 23000;
+
+const teamNo = document.getElementById("teamNo");
+const team = 100;
+
+const statesNo = document.getElementById("statesNo");
+const states = 15;
+
+let i = 0; 
+let j = 0; 
+let k = 0; 
+let l = 0; 
+
+const step = 150;
+const step1 = 250;
+
+  const interval = setInterval(() => {
+    i += step;
+    if (i >= client) {
+      i = client;
+      clearInterval(interval);
+    }
+    clientNo.innerText = i.toLocaleString() + " +";
+  }, 25);
+
+  const interval2 = setInterval(() => {
+    j += step1;
+    if (j >= loan) {
+      j = loan;
+      clearInterval(interval2);
+    }
+    loanNo.innerText = j.toLocaleString() + " +";
+  }, 25);
+
+  const interval3 = setInterval(() => {
+    k += 5; 
+    if (k >= team) {
+      k = team;
+      clearInterval(interval3);
+    }
+    teamNo.innerText = k.toLocaleString() + " +";
+  }, 30);
+
+  const interval4 = setInterval(() => {
+    l += 1; 
+    if (l >= states) {
+      l = states;
+      clearInterval(interval4);
+    }
+    statesNo.innerText = l.toLocaleString() + " +";
+  }, 80); 
+
+
+const all = document.querySelectorAll(".b_card");
+const loanSettlement = document.querySelectorAll(".loanSettlement");
+const debtManagement = document.querySelectorAll(".debtManagement");
+const Financial = document.querySelectorAll(".Financial");
+const creditScore = document.querySelectorAll(".creditScore");
+
+
+
+function showOnly(categoryCards) {
+  all.forEach((card) => {
+    card.classList.remove("activeHe"); 
+    card.classList.add("NoactiveHe"); 
+  });
+
+  categoryCards.forEach((card) => {
+    card.classList.remove("NoactiveHe"); 
+    card.classList.add("activeHe"); 
+  });
+}
+
+
+function reset() {
+  all.forEach((card) => {
+    card.classList.remove("NoactiveHe");
+    card.classList.add("activeHe");
+  });
+}
+
+function category1() {
+  reset(); 
+}
+
+function category2() {
+  showOnly(loanSettlement);
+}
+
+function category3() {
+  showOnly(debtManagement);
+}
+
+function category4() {
+  showOnly(creditScore);
+}
+
+function category5() {
+  showOnly(Financial);
+}
+
+
+const first = document.getElementById("B_main");
+ const second = document.getElementById("B_second");
+
+
+
+
+function openFirst() {
+  first.classList.remove("activeHe", "activeHogya");
+  first.classList.add("NoactiveHe");
+
+  second.classList.remove("NoactiveHe");
+  second.classList.add("activeHe");
+}
+
+function doSOmething() {
+  first.classList.remove("NoactiveHe");
+  first.classList.add("activeHogya");
+
+  second.classList.remove("activeHe");
+  second.classList.add("NoactiveHe");
+}
