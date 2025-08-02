@@ -114,6 +114,59 @@ function showSection(sectionId) {
 }
 
 const faqItems = document.querySelectorAll(".faq_item");
+const FfaqItems = document.querySelectorAll(".F_faq_item");
+FfaqItems.forEach((item) => {
+  const question = item.querySelector(".question");
+  const answer1 = item.querySelector(".answer1");
+  const btn = item.querySelector(".faq_btn");
+
+  question.addEventListener("click", () => {
+    const isOpen = answer1.style.display === "block";
+
+    document
+      .querySelectorAll(".answer1")
+      .forEach((a) => (a.style.display = "none"));
+    document.querySelectorAll(".faq_btn").forEach((b) => (b.textContent = "+"));
+
+    if (!isOpen) {
+      answer1.style.display = "block";
+      btn.textContent = "−";
+    } else {
+      answer1.style.display = "none";
+      btn.textContent = "+";
+    }
+  });
+});
+
+
+
+
+const FfaqItems2 = document.querySelectorAll(".F_faq_item2");
+FfaqItems2.forEach((item) => {
+  const question = item.querySelector(".question");
+  const answer1 = item.querySelector(".answer1");
+  const btn = item.querySelector(".faq_btn");
+
+  question.addEventListener("click", () => {
+    const isOpen = answer1.style.display === "block";
+
+    document
+      .querySelectorAll(".answer1")
+      .forEach((a) => (a.style.display = "none"));
+    document.querySelectorAll(".faq_btn").forEach((b) => (b.textContent = "+"));
+
+    if (!isOpen) {
+      answer1.style.display = "block";
+      btn.textContent = "−";
+    } else {
+      answer1.style.display = "none";
+      btn.textContent = "+";
+    }
+  });
+});
+
+
+
 
 faqItems.forEach((item) => {
   const question = item.querySelector(".question");
