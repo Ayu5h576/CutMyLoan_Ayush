@@ -107,11 +107,35 @@ function updateBar() {
   }
 }
 
+// function showSection(sectionId) {
+//   const sections = document.querySelectorAll(".section");
+//   sections.forEach((section) => section.classList.remove("active"));
+//   document.getElementById(sectionId).classList.add("active");
+// }
 function showSection(sectionId) {
   const sections = document.querySelectorAll(".section");
   sections.forEach((section) => section.classList.remove("active"));
-  document.getElementById(sectionId).classList.add("active");
+
+  const target = document.getElementById(sectionId);
+  if (target) {
+    target.classList.add("active");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+
+    
+    window.location.hash = sectionId;
+  }
 }
+window.onload = function () {
+  const hash = window.location.hash.replace("#", "");
+  if (hash) {
+    showSection(hash);
+  } else {
+    showSection("home"); 
+  }
+};
+
+
+
 
 const faqItems = document.querySelectorAll(".faq_item");
 const FfaqItems = document.querySelectorAll(".F_faq_item");
@@ -316,7 +340,7 @@ const step1 = 250;
   }, 25);
 
   const interval3 = setInterval(() => {
-    k += 5; 
+    k += 2; 
     if (k >= team) {
       k = team;
       clearInterval(interval3);
@@ -331,7 +355,7 @@ const step1 = 250;
       clearInterval(interval4);
     }
     statesNo.innerText = l.toLocaleString() + " +";
-  }, 80); 
+  }, 100); 
 
 
 const all = document.querySelectorAll(".b_card");
@@ -403,4 +427,8 @@ function doSOmething() {
 
   second.classList.remove("activeHe");
   second.classList.add("NoactiveHe");
+}
+function toggleMenu() {
+  const nav = document.getElementById("mobile-menu");
+  nav.classList.toggle("show");
 }
