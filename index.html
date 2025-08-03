@@ -34,7 +34,8 @@
   padding: 10px 0;
                 display: flex;
                 flex-direction:row ;
-               
+               justify-content: space-between;
+
                 gap: 0;
                 height: 98px;
                 background-image:linear-gradient(to right,#DFDFDF,#DBDDDF,#D1D7D9) ;
@@ -5402,7 +5403,170 @@ font-size: 16px;
   }
 
 
+#privacy{
+  font-family: poppins;
+background-image: linear-gradient(to right ,#DFDFDF,#DADCDE,#D1D7D9);
+}
 
+.P_hero{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 200px;
+background-image: linear-gradient(to right ,#012D4C,#0268AE);
+font-size: 50px;
+color: white;
+font-weight: bold;
+
+}
+
+.P_main{
+   padding: 30px 150px;
+   width: 100vw;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   /* align-items: center; */
+   gap: 20px;
+}
+
+.P_main h1 ,h2 ,h3{
+  color: #012C4A;
+}
+
+.P_main p{
+  color: #4e5d7b;
+}
+
+.P_main li {
+ 
+  line-height: 1.6;
+  color: #4e5d7b;
+}
+
+.P_main b {
+ 
+  line-height: 1.6;
+  color: #012C4A;
+}
+.P_main li ::before{
+  display: none;
+}
+
+
+
+ @media screen and (max-width: 768px){
+
+
+.P_hero{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 125px;
+
+font-size: 20px;
+color: white;
+font-weight: bold;
+
+}
+
+.P_main{
+   padding: 15px 20px;
+   width: 100vw;
+display: flex;
+flex-direction: column;
+   gap: 10px;
+}
+
+
+.P_main h1 ,h2 ,h3{
+  color: #012C4A;
+  font-size: 15px;
+}
+
+.P_main p{
+  color: #4e5d7b;
+  font-size: 12px;
+}
+
+.P_main li {
+ 
+  line-height: 1.6;
+  color: #4e5d7b;
+  font-size: 12px;
+}
+
+.P_main b {
+ 
+  line-height: 1.6;
+  color: #012C4A;
+  font-size: 13px;
+}
+.P_main li ::before{
+  display: none;
+}
+
+
+
+ }
+
+
+
+
+ #mobile-menu {
+  display: none;
+  flex-direction: column;
+  background: white;
+  position: absolute;
+  top: 60px; 
+  width: 150px;
+  z-index: 99;
+  margin-left: -100px;
+}
+
+#mobile-menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+#mobile-menu li {
+  padding: 10px 20px;
+  font-family: poppins;
+  color: #171D2D;
+
+  border-bottom: 1px solid #ddd;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  nav {
+    display: none;
+  }
+
+  nav.show {
+    display: flex !important;
+  }
+
+  .nav-item{
+    display: none;
+  }
+}
+
+
+ 
 
 
 
@@ -5444,6 +5608,29 @@ font-size: 16px;
       <a onclick="showSection('home')" ><img class="logo" src="./assets/logo.png" alt="logo" style="cursor: pointer;"> </a>
          
 </div>
+
+
+
+
+<header>
+  
+  <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+  <nav id="mobile-menu" class="hidden">
+    <ul>
+      <li><a onclick="showSection('home')" style="cursor: pointer;">Home</a></li>
+      <li><a onclick="showSection('ourService')" style="cursor: pointer;">Services</a></li>
+      <li><a onclick="showSection('contactUs')">Contact Us</a></li>
+      <li><a onclick="showSection('Mainfaq')">Faq</a></li>
+      <li><a onclick="showSection('aboutUs')">About Us</a></li>
+<li><a onclick="showSection('privacy')">Privacy Policy</a></li>
+<li><a onclick="showSection('blog')" style="cursor: pointer;">BLOG</a></li>
+
+
+
+    </ul>
+  </nav>
+</header>
+
         <span class="nav-item" >
           <h6><a onclick="showSection('home')" style="cursor: pointer;">HOME</a></h6>
         
@@ -5462,7 +5649,7 @@ font-size: 16px;
           <a href="#">ABOUT <i class="fas fa-chevron-down"></i></a>
           <div class="dropdown-content">
             <a onclick="showSection('aboutUs')">About Us</a>
-            <a href="#">Privacy Policy</a>
+            <a onclick="showSection('privacy')">Privacy Policy</a>
           
           </div>
         </div>
@@ -5538,6 +5725,10 @@ font-size: 16px;
         
     </div>
    
+
+
+
+
    </div>
 
 
@@ -5793,28 +5984,32 @@ transition: height 0.4s ease; ">
 </div>
 <div class="hand">
   <span class="hand1">
-    <img src="./assets/handshake_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png" alt="">
+    <!-- <img src="./assets/handshake_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png" alt=""> -->
+    <i class="fa-solid fa-handshake" style="color: white; font-size: 30px;"></i>
   </span>
   <p>End-To-End</p>
   <p>Support</p>
 </div>
 <div class="glass">
   <span class="glass1">
-    <img src="./assets/data_loss_prevention_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png" alt="">
+    <!-- <img src="./assets/data_loss_prevention_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png" alt=""> -->
+     <i class="fa-solid fa-magnifying-glass-dollar" style="color: white; font-size: 30px;"></i>
   </span>
   <p>Transparent</p>
   <p>Process</p>
 </div>
 <div class="group">
   <span class="group1">
-    <img src="./assets/group_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png" alt="">
+    <!-- <img src="./assets/group_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png" alt=""> -->
+     <i class="fa-solid fa-user-group" style="color: white; font-size: 30px;"></i>
   </span>
   <p>Trusted By </p>
   <p>Thousands</p>
 </div>
 <div class="legal">
   <span class="legal1">
-    <img src="./assets/balance_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png" alt="">
+    <!-- <img src="./assets/balance_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png" alt=""> -->
+     <i class="fa-solid fa-scale-balanced" style="color: white; font-size: 30px;"></i>
   </span>
   <p>Legal+Financial</p>
   <p>Experts</p>
@@ -5894,7 +6089,7 @@ transition: height 0.4s ease; ">
 
 
 <!-- testimonials -->
-<div class="testimonials">
+<div class="testimonials" id="testimonials">
   <h1>Client Testimonials</h1>
 <p>Hear how we've helped clients break free from debt and regain control.</p>
 
@@ -6690,6 +6885,143 @@ Calculator</button>
 
 </div>
 
+<div id="privacy" class="section">
+<div class="P_hero">
+  Privcy Policy
+</div>
+<div class="P_main">
+  <h1>Privacy Policy – CutMyLoan</h1>
+  <p>CutMyLoan.com (“CutMyLoan”, “we”, “us”, or “our”) respects your privacy and is committed to protecting the personal and financial information you share with us. This Privacy Policy outlines how we collect, use, share, and safeguard your data, along with your rights and choices.</p>
+  <p>By accessing or using our website, forms, or services, you agree to the terms of this Privacy Policy.</p>
+
+<hr>
+
+  <h2>1. Information We Collect</h2>
+  <p>We collect two types of information:</p>
+
+  <h3>a. Personally Identifiable Information (PII)</h3>
+  <p>Collected when you:</p>
+  <ul>
+    <li>Fill a form on our website (via HubSpot)</li>
+    <li>Communicate with our advisors (via call Email or WhatsApp)</li>
+    <li>Subscribe to our services</li>
+  </ul>
+  <p>This includes:</p>
+  <ul>
+    <li>Full Name</li>
+    <li>Phone Number</li>
+    <li>Email Address</li>
+    <li>Financial Data (e.g., existing loan details, credit card debt, EMI history, liabilities)</li>
+  </ul>
+
+  <h3>b. Non-Personal Data</h3>
+  <p>Automatically collected through tools like Google Analytics:</p>
+  <ul>
+    <li>Browser and Device Type</li>
+    <li>Time Zone and IP Address</li>
+    <li>Pages Visited</li>
+    <li>Language Preference</li>
+    <li>Referring URL</li>
+  </ul>
+
+  <hr>
+
+  <h2>2. How We Collect Data</h2>
+  <ul>
+    <li><b>HubSpot Form:</b> For capturing basic contact details (name, phone, email).</li>
+    <li><b>Call/WhatsApp Follow-ups:</b> Advisors collect financial information directly from you during conversations.</li>
+    <li><b>Google Analytics:</b> Helps us understand website usage and improve user experience.</li>
+  </ul>
+
+  <hr>
+
+  <h2>3. Use of Your Information</h2>
+  <p>We use your data to:</p>
+  <ul>
+    <li>Provide consultation on debt settlement</li>
+    <li>Customize solutions based on your financial profile</li>
+    <li>Communicate via email, phone, or WhatsApp</li>
+    <li>Send relevant service updates and offers</li>
+    <li>Improve our website, services, and lead quality</li>
+    <li>Perform internal analysis and reporting</li>
+  </ul>
+
+<hr>
+
+  <h2>4. Data Sharing and Disclosure</h2>
+  <p>We <b>do not sell or rent your information</b> to any third party.</p>
+  <p>We may only share data with:</p>
+  <ul>
+    <li><b>Credit Bureaus (e.g., CIBIL, Experian)</b> — with your consent, to assess your financial standing</li>
+    <li><b>Internal Advisors</b> — bound by confidentiality agreements</li>
+    <li><b>Legal Authorities</b> — if required by law, legal process, or for fraud prevention</li>
+  </ul>
+
+  <hr>
+
+  <h2>5. Data Security</h2>
+  <p>Your data security is our top priority:</p>
+  <ul>
+    <li>We use <b>SSL encryption</b> for all transmissions</li>
+    <li>Client data is stored securely on internal company servers</li>
+    <li>Only limited and authorized team members have access</li>
+    <li>Our website is regularly scanned for vulnerabilities</li>
+    <li>Payment data, if any, is processed through secure third-party gateways (we do not store card data)</li>
+  </ul>
+
+  <hr>
+
+  <h2>6. Data Retention and Deletion Policy</h2>
+  <p>We retain your information <b>only during the course of service</b>.</p>
+  <p><b>All personal and financial data is automatically deleted within 90 days (3 months)</b> after your service with CutMyLoan ends.</p>
+  <p>This ensures your long-term privacy and data protection.</p>
+
+<hr>
+
+  <h2>7. Your Rights</h2>
+  <p>You have full control over your data:</p>
+  <ul>
+    <li>Request access to your information</li>
+    <li>Ask for corrections or deletion</li>
+  </ul>
+
+  <hr>
+
+  <h2>8. Use of Cookies</h2>
+  <p>We may use cookies and tracking pixels for:</p>
+  <ul>
+    <li>Website analytics</li>
+    <li>Customization</li>
+    <li>Retargeted advertising</li>
+  </ul>
+  <p>You can choose to disable cookies from your browser settings.</p>
+
+<hr>
+
+  <h2>9. Third-Party Links</h2>
+  <p>Our website may include links to external sites. We are not responsible for the privacy practices of those sites. Please review their respective policies when visiting.</p>
+
+<hr>
+
+  <h2>10. Updates to This Policy</h2>
+  <p>We may update this policy periodically. Continued use of our website means you accept the latest version.</p>
+
+<hr>
+
+  <h2>11. Contact Us</h2>
+  <p>For any queries, complaints, or data removal requests:</p>
+<p><b>Email:</b> <a href="mailto:support@cutmyloan.com">support@cutmyloan.com</a></p>
+  <p><b>Phone: </b>9211 783 100  </p>
+
+
+</div>
+
+
+
+</div>
+
+
+
 
 
 <footer class="footer">
@@ -6708,9 +7040,11 @@ Calculator</button>
       <div>
         <h4>Legal</h4>
         <ul>
-          <li>Privacy Policy</li>
+
+          <a onclick="showSection('privacy') " ><li style="cursor: pointer;">Privacy Policy</li></a> 
+          
           <li>Term and Condition</li>
-          <li>Services</li>
+          <a onclick="showSection('ourService') " ><li style="cursor: pointer;">Services</li></a>
         </ul>
       </div>
 
@@ -6728,9 +7062,10 @@ Calculator</button>
         <h4>Quick Links</h4>
         <ul>
          <a onclick="showSection('home') " ><li style="cursor: pointer;">Home</li></a> 
-          <li>FAQ</li>
-          <li>Testimonials</li>
-          <li>Blogs</li>
+         <a onclick="showSection('Mainfaq') " ><li style="cursor: pointer;">FAQ</li></a> 
+         <a href="#testimonials"><li style="cursor: pointer;">Testimonials</li></a> 
+         <a onclick="showSection('blog') " ><li style="cursor: pointer;">Blogs</li></a> 
+        
         </ul>
       </div>
 
